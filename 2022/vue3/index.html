@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Vue3 快速上手 1.Vue3 简介  2020 年 9 月 18 日，Vue.js 发布 3.0 版本，代号：One Piece（海贼王） 耗时 2 年多、2600&#43;次提交、30&#43;个 RFC、600&#43;次 PR、99 位贡献者 github 上的 tags 地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0  2.Vue3 带来了什么 1.性能的提升   打包大小减少 41%
+  初次渲染快 55%, 更新渲染快 133%
+  内存减少 54%
+&amp;hellip;&amp;hellip;
+  2.源码的升级   使用 Proxy 代替 defineProperty 实现响应式
+  重写虚拟 DOM 的实现和 Tree-Shaking
+&amp;hellip;&amp;hellip;
+  3.拥抱 TypeScript  Vue3 可以更好的支持 TypeScript  4.'><title>Vue3</title>
+
+<link rel='canonical' href='https://example.com/2022/vue3/'>
+
+<link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='Vue3'>
+<meta property='og:description' content='Vue3 快速上手 1.Vue3 简介  2020 年 9 月 18 日，Vue.js 发布 3.0 版本，代号：One Piece（海贼王） 耗时 2 年多、2600&#43;次提交、30&#43;个 RFC、600&#43;次 PR、99 位贡献者 github 上的 tags 地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0  2.Vue3 带来了什么 1.性能的提升   打包大小减少 41%
+  初次渲染快 55%, 更新渲染快 133%
+  内存减少 54%
+&amp;hellip;&amp;hellip;
+  2.源码的升级   使用 Proxy 代替 defineProperty 实现响应式
+  重写虚拟 DOM 的实现和 Tree-Shaking
+&amp;hellip;&amp;hellip;
+  3.拥抱 TypeScript  Vue3 可以更好的支持 TypeScript  4.'>
+<meta property='og:url' content='https://example.com/2022/vue3/'>
+<meta property='og:site_name' content='玮'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-15T01:06:02&#43;08:00'/>
+<meta name="twitter:title" content="Vue3">
+<meta name="twitter:description" content="Vue3 快速上手 1.Vue3 简介  2020 年 9 月 18 日，Vue.js 发布 3.0 版本，代号：One Piece（海贼王） 耗时 2 年多、2600&#43;次提交、30&#43;个 RFC、600&#43;次 PR、99 位贡献者 github 上的 tags 地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0  2.Vue3 带来了什么 1.性能的提升   打包大小减少 41%
+  初次渲染快 55%, 更新渲染快 133%
+  内存减少 54%
+&amp;hellip;&amp;hellip;
+  2.源码的升级   使用 Proxy 代替 defineProperty 实现响应式
+  重写虚拟 DOM 的实现和 Tree-Shaking
+&amp;hellip;&amp;hellip;
+  3.拥抱 TypeScript  Vue3 可以更好的支持 TypeScript  4.">
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/WechatIMG1_hu3e475a1a2ee85b856cd982cc46c8d9eb_97256_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💬</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玮</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/home?lang=zh'
+                        target="_blank"
+                        title="Qing"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/wei-zhong1'
+                        target="_blank"
+                        title="Wei"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/vue3/" >
+                Vue3
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2022/vue3/">Vue3</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 14, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="vue3-快速上手">Vue3 快速上手</h1>
+<!-- raw HTML omitted -->
+<h2 id="1vue3-简介">1.Vue3 简介</h2>
+<ul>
+<li>2020 年 9 月 18 日，Vue.js 发布 3.0 版本，代号：One Piece（海贼王）</li>
+<li>耗时 2 年多、<a class="link" href="https://github.com/vuejs/vue-next/graphs/commit-activity"  target="_blank" rel="noopener"
+    >2600+次提交</a>、<a class="link" href="https://github.com/vuejs/rfcs/tree/master/active-rfcs"  target="_blank" rel="noopener"
+    >30+个 RFC</a>、<a class="link" href="https://github.com/vuejs/vue-next/pulls?q=is%3Apr&#43;is%3Amerged&#43;-author%3Aapp%2Fdependabot-preview&#43;"  target="_blank" rel="noopener"
+    >600+次 PR</a>、<a class="link" href="https://github.com/vuejs/vue-next/graphs/contributors"  target="_blank" rel="noopener"
+    >99 位贡献者</a></li>
+<li>github 上的 tags 地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0</li>
+</ul>
+<h2 id="2vue3-带来了什么">2.Vue3 带来了什么</h2>
+<h3 id="1性能的提升">1.性能的提升</h3>
+<ul>
+<li>
+<p>打包大小减少 41%</p>
+</li>
+<li>
+<p>初次渲染快 55%, 更新渲染快 133%</p>
+</li>
+<li>
+<p>内存减少 54%</p>
+<p>&hellip;&hellip;</p>
+</li>
+</ul>
+<h3 id="2源码的升级">2.源码的升级</h3>
+<ul>
+<li>
+<p>使用 Proxy 代替 defineProperty 实现响应式</p>
+</li>
+<li>
+<p>重写虚拟 DOM 的实现和 Tree-Shaking</p>
+<p>&hellip;&hellip;</p>
+</li>
+</ul>
+<h3 id="3拥抱-typescript">3.拥抱 TypeScript</h3>
+<ul>
+<li>Vue3 可以更好的支持 TypeScript</li>
+</ul>
+<h3 id="4新的特性">4.新的特性</h3>
+<ol>
+<li>
+<p>Composition API（组合 API）</p>
+<ul>
+<li>setup 配置</li>
+<li>ref 与 reactive</li>
+<li>watch 与 watchEffect</li>
+<li>provide 与 inject</li>
+<li>&hellip;&hellip;</li>
+</ul>
+</li>
+<li>
+<p>新的内置组件</p>
+<ul>
+<li>Fragment</li>
+<li>Teleport</li>
+<li>Suspense</li>
+</ul>
+</li>
+<li>
+<p>其他改变</p>
+<ul>
+<li>新的生命周期钩子</li>
+<li>data 选项应始终被声明为一个函数</li>
+<li>移除 keyCode 支持作为 v-on 的修饰符</li>
+<li>&hellip;&hellip;</li>
+</ul>
+</li>
+</ol>
+<h1 id="一创建-vue30-工程">一、创建 Vue3.0 工程</h1>
+<h2 id="1使用-vue-cli-创建">1.使用 vue-cli 创建</h2>
+<p>官方文档：https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## 查看@vue/cli版本，确保@vue/cli版本在4.5.0以上</span>
+</span></span><span class="line"><span class="cl">vue --version
+</span></span><span class="line"><span class="cl"><span class="c1">## 安装或者升级你的@vue/cli</span>
+</span></span><span class="line"><span class="cl">npm install -g @vue/cli
+</span></span><span class="line"><span class="cl"><span class="c1">## 创建</span>
+</span></span><span class="line"><span class="cl">vue create vue_test
+</span></span><span class="line"><span class="cl"><span class="c1">## 启动</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> vue_test
+</span></span><span class="line"><span class="cl">npm run serve
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2使用-vite-创建">2.使用 vite 创建</h2>
+<p>官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite</p>
+<p>vite 官网：https://vitejs.cn</p>
+<ul>
+<li>什么是 vite？—— 新一代前端构建工具。</li>
+<li>优势如下：
+<ul>
+<li>开发环境中，无需打包操作，可快速的冷启动。</li>
+<li>轻量快速的热重载（HMR）。</li>
+<li>真正的按需编译，不再等待整个应用编译完成。</li>
+</ul>
+</li>
+<li>传统构建 与 vite 构建对比图</li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## 创建工程</span>
+</span></span><span class="line"><span class="cl">npm init vite-app &lt;project-name&gt;
+</span></span><span class="line"><span class="cl"><span class="c1">## 进入工程目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> &lt;project-name&gt;
+</span></span><span class="line"><span class="cl"><span class="c1">## 安装依赖</span>
+</span></span><span class="line"><span class="cl">npm install
+</span></span><span class="line"><span class="cl"><span class="c1">## 运行</span>
+</span></span><span class="line"><span class="cl">npm run dev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="二常用-composition-api">二、常用 Composition API</h1>
+<p>官方文档: <a class="link" href="https://v3.cn.vuejs.org/guide/composition-api-introduction.html"  target="_blank" rel="noopener"
+    >https://v3.cn.vuejs.org/guide/composition-api-introduction.html</a></p>
+<h2 id="1拉开序幕的-setup">1.拉开序幕的 setup</h2>
+<ol>
+<li>理解：Vue3.0 中一个新的配置项，值为一个函数。</li>
+<li>setup 是所有<!-- raw HTML omitted -->Composition API（组合 API）<!-- raw HTML omitted --><!-- raw HTML omitted -->“ 表演的舞台 ”<!-- raw HTML omitted -->。</li>
+<li>组件中所用到的：数据、方法等等，均要配置在 setup 中。</li>
+<li>setup 函数的两种返回值：
+<ol>
+<li>若返回一个对象，则对象中的属性、方法, 在模板中均可以直接使用。（重点关注！）</li>
+<li><!-- raw HTML omitted -->若返回一个渲染函数：则可以自定义渲染内容。（了解）<!-- raw HTML omitted --></li>
+</ol>
+</li>
+<li>注意点：
+<ol>
+<li>尽量不要与 Vue2.x 配置混用
+<ul>
+<li>Vue2.x 配置（data、methos、computed&hellip;）中<!-- raw HTML omitted -->可以访问到<!-- raw HTML omitted -->setup 中的属性、方法。</li>
+<li>但在 setup 中<!-- raw HTML omitted -->不能访问到<!-- raw HTML omitted -->Vue2.x 配置（data、methos、computed&hellip;）。</li>
+<li>如果有重名, setup 优先。</li>
+</ul>
+</li>
+<li>setup 不能是一个 async 函数，因为返回值不再是 return 的对象, 而是 promise, 模板看不到 return 对象中的属性。（后期也可以返回一个 Promise 实例，但需要 Suspense 和异步组件的配合）</li>
+</ol>
+</li>
+</ol>
+<h2 id="2ref-函数">2.ref 函数</h2>
+<ul>
+<li>作用: 定义一个响应式的数据</li>
+<li>语法: <code>const xxx = ref(initValue)</code>
+<ul>
+<li>创建一个包含响应式数据的<!-- raw HTML omitted -->引用对象（reference 对象，简称 ref 对象）<!-- raw HTML omitted -->。</li>
+<li>JS 中操作数据： <code>xxx.value</code></li>
+<li>模板中读取数据: 不需要.value，直接：<code>&lt;div&gt;{{xxx}}&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>备注：
+<ul>
+<li>接收的数据可以是：基本类型、也可以是对象类型。</li>
+<li>基本类型的数据：响应式依然是靠<code>Object.defineProperty()</code>的<code>get</code>与<code>set</code>完成的。</li>
+<li>对象类型的数据：内部 <!-- raw HTML omitted -->“ 求助 ”<!-- raw HTML omitted --> 了 Vue3.0 中的一个新函数—— <code>reactive</code>函数。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3reactive-函数">3.reactive 函数</h2>
+<ul>
+<li>作用: 定义一个<!-- raw HTML omitted -->对象类型<!-- raw HTML omitted -->的响应式数据（基本类型不要用它，要用<code>ref</code>函数）</li>
+<li>语法：<code>const 代理对象= reactive(源对象)</code>接收一个对象（或数组），返回一个<!-- raw HTML omitted -->代理对象（Proxy 的实例对象，简称 proxy 对象）<!-- raw HTML omitted --></li>
+<li>reactive 定义的响应式数据是“深层次的”。</li>
+<li>内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据进行操作。</li>
+</ul>
+<h2 id="4vue30-中的响应式原理">4.Vue3.0 中的响应式原理</h2>
+<h3 id="vue2x-的响应式">vue2.x 的响应式</h3>
+<ul>
+<li>
+<p>实现原理：</p>
+<ul>
+<li>
+<p>对象类型：通过<code>Object.defineProperty()</code>对属性的读取、修改进行拦截（数据劫持）。</p>
+</li>
+<li>
+<p>数组类型：通过重写更新数组的一系列方法来实现拦截。（对数组的变更方法进行了包裹）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">get</span><span class="p">()</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">set</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>存在问题：</p>
+<ul>
+<li>新增属性、删除属性, 界面不会更新。</li>
+<li>直接通过下标修改数组, 界面不会自动更新。</li>
+</ul>
+</li>
+</ul>
+<h3 id="vue30-的响应式">Vue3.0 的响应式</h3>
+<ul>
+<li>实现原理:
+<ul>
+<li>
+<p>通过 Proxy（代理）: 拦截对象中任意属性的变化, 包括：属性值的读写、属性的添加、属性的删除等。</p>
+</li>
+<li>
+<p>通过 Reflect（反射）: 对源对象的属性进行操作。</p>
+</li>
+<li>
+<p>MDN 文档中描述的 Proxy 与 Reflect：</p>
+<ul>
+<li>
+<p>Proxy：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy</p>
+</li>
+<li>
+<p>Reflect：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 拦截读取属性值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">get</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">Reflect</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 拦截设置属性值或添加新属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">set</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">Reflect</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 拦截删除属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">deleteProperty</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">Reflect</span><span class="p">.</span><span class="nx">deleteProperty</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">prop</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">proxy</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;tom&#39;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5reactive-对比-ref">5.reactive 对比 ref</h2>
+<ul>
+<li>从定义数据角度对比：
+<ul>
+<li>ref 用来定义：<!-- raw HTML omitted -->基本类型数据<!-- raw HTML omitted -->。</li>
+<li>reactive 用来定义：<!-- raw HTML omitted -->对象（或数组）类型数据<!-- raw HTML omitted -->。</li>
+<li>备注：ref 也可以用来定义<!-- raw HTML omitted -->对象（或数组）类型数据<!-- raw HTML omitted -->, 它内部会自动通过<code>reactive</code>转为<!-- raw HTML omitted -->代理对象<!-- raw HTML omitted -->。</li>
+</ul>
+</li>
+<li>从原理角度对比：
+<ul>
+<li>ref 通过<code>Object.defineProperty()</code>的<code>get</code>与<code>set</code>来实现响应式（数据劫持）。</li>
+<li>reactive 通过使用<!-- raw HTML omitted -->Proxy<!-- raw HTML omitted -->来实现响应式（数据劫持）, 并通过<!-- raw HTML omitted -->Reflect<!-- raw HTML omitted -->操作<!-- raw HTML omitted -->源对象<!-- raw HTML omitted -->内部的数据。</li>
+</ul>
+</li>
+<li>从使用角度对比：
+<ul>
+<li>ref 定义的数据：操作数据<!-- raw HTML omitted -->需要<!-- raw HTML omitted --><code>.value</code>，读取数据时模板中直接读取<!-- raw HTML omitted -->不需要<!-- raw HTML omitted --><code>.value</code>。</li>
+<li>reactive 定义的数据：操作数据与读取数据：<!-- raw HTML omitted -->均不需要<!-- raw HTML omitted --><code>.value</code>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="6setup-的两个注意点">6.setup 的两个注意点</h2>
+<ul>
+<li>setup 执行的时机
+<ul>
+<li>在 beforeCreate 之前执行一次，this 是 undefined。</li>
+</ul>
+</li>
+<li>setup 的参数
+<ul>
+<li>props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性。</li>
+<li>context：上下文对象
+<ul>
+<li>attrs: 值为对象，包含：组件外部传递过来，但没有在 props 配置中声明的属性, 相当于 <code>this.$attrs</code>。</li>
+<li>slots: 收到的插槽内容, 相当于 <code>this.$slots</code>。</li>
+<li>emit: 分发自定义事件的函数, 相当于 <code>this.$emit</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7计算属性与监视">7.计算属性与监视</h2>
+<h3 id="1computed-函数">1.computed 函数</h3>
+<ul>
+<li>
+<p>与 Vue2.x 中 computed 配置功能一致</p>
+</li>
+<li>
+<p>写法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span><span class="nx">computed</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">setup</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//计算属性——简写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">fullName</span> <span class="o">=</span> <span class="nx">computed</span><span class="p">(()=&gt;{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//计算属性——完整
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">fullName</span> <span class="o">=</span> <span class="nx">computed</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">get</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">set</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">nameArr</span> <span class="o">=</span> <span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">nameArr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">nameArr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="2watch-函数">2.watch 函数</h3>
+<ul>
+<li>
+<p>与 Vue2.x 中 watch 配置功能一致</p>
+</li>
+<li>
+<p>两个小“坑”：</p>
+<ul>
+<li>监视 reactive 定义的响应式数据时：oldValue 无法正确获取、强制开启了深度监视（deep 配置失效）。</li>
+<li>监视 reactive 定义的响应式数据中某个属性时：deep 配置有效。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//情况一：监视ref定义的响应式数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sum</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;sum变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//情况二：监视多个ref定义的响应式数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watch</span><span class="p">([</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">msg</span><span class="p">],</span> <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;sum或msg变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 情况三：监视reactive定义的响应式数据
+</span></span></span><span class="line"><span class="cl"><span class="cm">			若watch监视的是reactive定义的响应式数据，则无法正确获得oldValue！！
+</span></span></span><span class="line"><span class="cl"><span class="cm">			若watch监视的是reactive定义的响应式数据，则强制开启了深度监视 
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span><span class="line"><span class="cl"><span class="nx">watch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">person</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;person变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">deep</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span> <span class="c1">//此处的deep配置不再奏效
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//情况四：监视reactive定义的响应式数据中的某个属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">job</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;person的job变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">deep</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//情况五：监视reactive定义的响应式数据中的某些属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[()</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">job</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;person的job变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">deep</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//特殊情况
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">person</span><span class="p">.</span><span class="nx">job</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;person的job变化了&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">deep</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span> <span class="c1">//此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="3watcheffect-函数">3.watchEffect 函数</h3>
+<ul>
+<li>
+<p>watch 的套路是：既要指明监视的属性，也要指明监视的回调。</p>
+</li>
+<li>
+<p>watchEffect 的套路是：不用指明监视哪个属性，监视的回调中用到哪个属性，那就监视哪个属性。</p>
+</li>
+<li>
+<p>watchEffect 有点像 computed：</p>
+<ul>
+<li>但 computed 注重的计算出来的值（回调函数的返回值），所以必须要写返回值。</li>
+<li>而 watchEffect 更注重的是过程（回调函数的函数体），所以不用写返回值。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//watchEffect所指定的回调中用到的数据只要发生变化，则直接重新执行回调。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">watchEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">x1</span> <span class="o">=</span> <span class="nx">sum</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">x2</span> <span class="o">=</span> <span class="nx">person</span><span class="p">.</span><span class="nx">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;watchEffect配置的回调执行了&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="8生命周期">8.生命周期</h2>
+<!-- raw HTML omitted -->
+<p>1</p>
+<ul>
+<li>Vue3.0 中可以继续使用 Vue2.x 中的生命周期钩子，但有有两个被更名：
+<ul>
+<li><code>beforeDestroy</code>改名为 <code>beforeUnmount</code></li>
+<li><code>destroyed</code>改名为 <code>unmounted</code></li>
+</ul>
+</li>
+<li>Vue3.0 也提供了 Composition API 形式的生命周期钩子，与 Vue2.x 中钩子对应关系如下：
+<ul>
+<li><code>beforeCreate</code>===&gt;<code>setup()</code></li>
+<li><code>created</code>=======&gt;<code>setup()</code></li>
+<li><code>beforeMount</code> ===&gt;<code>onBeforeMount</code></li>
+<li><code>mounted</code>=======&gt;<code>onMounted</code></li>
+<li><code>beforeUpdate</code>===&gt;<code>onBeforeUpdate</code></li>
+<li><code>updated</code> =======&gt;<code>onUpdated</code></li>
+<li><code>beforeUnmount</code> ==&gt;<code>onBeforeUnmount</code></li>
+<li><code>unmounted</code> =====&gt;<code>onUnmounted</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="9自定义-hook-函数">9.自定义 hook 函数</h2>
+<ul>
+<li>
+<p>什么是 hook？—— 本质是一个函数，把 setup 函数中使用的 Composition API 进行了封装。</p>
+</li>
+<li>
+<p>类似于 vue2.x 中的 mixin。</p>
+</li>
+<li>
+<p>自定义 hook 的优势: 复用代码, 让 setup 中的逻辑更清楚易懂。</p>
+</li>
+</ul>
+<h2 id="10toref">10.toRef</h2>
+<ul>
+<li>
+<p>作用：创建一个 ref 对象，其 value 值指向另一个对象中的某个属性。</p>
+</li>
+<li>
+<p>语法：<code>const name = toRef(person,'name')</code></p>
+</li>
+<li>
+<p>应用: 要将响应式对象中的某个属性单独提供给外部使用时。</p>
+</li>
+<li>
+<p>扩展：<code>toRefs</code> 与<code>toRef</code>功能一致，但可以批量创建多个 ref 对象，语法：<code>toRefs(person)</code></p>
+</li>
+</ul>
+<h1 id="三其它-composition-api">三、其它 Composition API</h1>
+<h2 id="1shallowreactive-与-shallowref">1.shallowReactive 与 shallowRef</h2>
+<ul>
+<li>
+<p>shallowReactive：只处理对象最外层属性的响应式（浅响应式）。</p>
+</li>
+<li>
+<p>shallowRef：只处理基本数据类型的响应式, 不进行对象的响应式处理。</p>
+</li>
+<li>
+<p>什么时候使用?</p>
+<ul>
+<li>如果有一个对象数据，结构比较深, 但变化时只是外层属性变化 ===&gt; shallowReactive。</li>
+<li>如果有一个对象数据，后续功能不会修改该对象中的属性，而是生新的对象来替换 ===&gt; shallowRef。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2readonly-与-shallowreadonly">2.readonly 与 shallowReadonly</h2>
+<ul>
+<li>readonly: 让一个响应式数据变为只读的（深只读）。</li>
+<li>shallowReadonly：让一个响应式数据变为只读的（浅只读）。</li>
+<li>应用场景: 不希望数据被修改时。</li>
+</ul>
+<h2 id="3toraw-与-markraw">3.toRaw 与 markRaw</h2>
+<ul>
+<li>toRaw：
+<ul>
+<li>作用：将一个由<code>reactive</code>生成的<!-- raw HTML omitted -->响应式对象<!-- raw HTML omitted -->转为<!-- raw HTML omitted -->普通对象<!-- raw HTML omitted -->。</li>
+<li>使用场景：用于读取响应式对象对应的普通对象，对这个普通对象的所有操作，不会引起页面更新。</li>
+</ul>
+</li>
+<li>markRaw：
+<ul>
+<li>作用：标记一个对象，使其永远不会再成为响应式对象。</li>
+<li>应用场景:
+<ol>
+<li>有些值不应被设置为响应式的，例如复杂的第三方类库等。</li>
+<li>当渲染具有不可变数据源的大列表时，跳过响应式转换可以提高性能。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4customref">4.customRef</h2>
+<ul>
+<li>
+<p>作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。</p>
+</li>
+<li>
+<p>实现防抖效果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">v</span><span class="nt">-model</span><span class="err">=&#34;</span><span class="na">keyword</span><span class="err">&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;{{</span> <span class="nx">keyword</span> <span class="p">}}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ref</span><span class="p">,</span> <span class="nx">customRef</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Demo&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// let keyword = ref(&#39;hello&#39;) //使用Vue准备好的内置ref
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//自定义一个myRef
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">myRef</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">timer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//通过customRef去实现自定义
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">return</span> <span class="nx">customRef</span><span class="p">((</span><span class="nx">track</span><span class="p">,</span> <span class="nx">trigger</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">get</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">track</span><span class="p">();</span> <span class="c1">//告诉Vue这个value值是需要被“追踪”的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="nx">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">set</span><span class="p">(</span><span class="nx">newValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">value</span> <span class="o">=</span> <span class="nx">newValue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">trigger</span><span class="p">();</span> <span class="c1">//告诉Vue去更新界面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">},</span> <span class="nx">delay</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">          <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">};</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">keyword</span> <span class="o">=</span> <span class="nx">myRef</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span> <span class="c1">//使用程序员自定义的ref
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">keyword</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="5provide-与-inject">5.provide 与 inject</h2>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>作用：实现<!-- raw HTML omitted -->祖与后代组件间<!-- raw HTML omitted -->通信</p>
+</li>
+<li>
+<p>套路：父组件有一个 <code>provide</code> 选项来提供数据，后代组件有一个 <code>inject</code> 选项来开始使用这些数据</p>
+</li>
+<li>
+<p>具体写法：</p>
+<ol>
+<li>
+<p>祖组件中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">setup</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="p">......</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">car</span> <span class="o">=</span> <span class="nx">reactive</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;奔驰&#39;</span><span class="p">,</span><span class="nx">price</span><span class="o">:</span><span class="s1">&#39;40万&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">provide</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">,</span><span class="nx">car</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">......</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>后代组件中：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">setup</span><span class="p">(</span><span class="nx">props</span><span class="p">,</span><span class="nx">context</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="p">......</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">car</span> <span class="o">=</span> <span class="nx">inject</span><span class="p">(</span><span class="s1">&#39;car&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span><span class="nx">car</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">......</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+</ul>
+<h2 id="6响应式数据的判断">6.响应式数据的判断</h2>
+<ul>
+<li>isRef: 检查一个值是否为一个 ref 对象</li>
+<li>isReactive: 检查一个对象是否是由 <code>reactive</code> 创建的响应式代理</li>
+<li>isReadonly: 检查一个对象是否是由 <code>readonly</code> 创建的只读代理</li>
+<li>isProxy: 检查一个对象是否是由 <code>reactive</code> 或者 <code>readonly</code> 方法创建的代理</li>
+</ul>
+<h1 id="四composition-api-的优势">四、Composition API 的优势</h1>
+<h2 id="1options-api-存在的问题">1.Options API 存在的问题</h2>
+<p>使用传统 OptionsAPI 中，新增或者修改一个需求，就需要分别在 data，methods，computed 里修改 。</p>
+<!-- raw HTML omitted -->
+<h2 id="2composition-api-的优势">2.Composition API 的优势</h2>
+<p>我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。</p>
+<!-- raw HTML omitted -->
+<h1 id="五新的组件">五、新的组件</h1>
+<h2 id="1fragment">1.Fragment</h2>
+<ul>
+<li>在 Vue2 中: 组件必须有一个根标签</li>
+<li>在 Vue3 中: 组件可以没有根标签, 内部会将多个标签包含在一个 Fragment 虚拟元素中</li>
+<li>好处: 减少标签层级, 减小内存占用</li>
+</ul>
+<h2 id="2teleport">2.Teleport</h2>
+<ul>
+<li>
+<p>什么是 Teleport？—— <code>Teleport</code> 是一种能够将我们的<!-- raw HTML omitted -->组件 html 结构<!-- raw HTML omitted -->移动到指定位置的技术。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">teleport</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;移动位置&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">div</span> <span class="nt">v-if</span><span class="s">=&#34;isShow&#34; class=&#34;mask&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">		&lt;div class=&#34;dialog&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">			&lt;h3&gt;我是一个弹窗&lt;/h3&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">			&lt;button @click=&#34;isShow = false&#34;</span><span class="p">&gt;</span><span class="na">关闭弹窗</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">teleport</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="3suspense">3.Suspense</h2>
+<ul>
+<li>
+<p>等待异步组件时渲染一些额外内容，让应用有更好的用户体验</p>
+</li>
+<li>
+<p>使用步骤：</p>
+<ul>
+<li>
+<p>异步引入组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">defineAsyncComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Child</span> <span class="o">=</span> <span class="nx">defineAsyncComponent</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./components/Child.vue&#39;</span><span class="p">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>使用<code>Suspense</code>包裹组件，并配置好<code>default</code> 与 <code>fallback</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="nx">我是App组件</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">Suspense</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v</span><span class="nt">-slot</span><span class="o">:</span><span class="na">default</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">Child</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v</span><span class="nt">-slot</span><span class="o">:</span><span class="na">fallback</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="nx">加载中</span><span class="p">.....&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">Suspense</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+<h1 id="六其他">六、其他</h1>
+<h2 id="1全局-api-的转移">1.全局 API 的转移</h2>
+<ul>
+<li>
+<p>Vue 2.x 有许多全局 API 和配置。</p>
+<ul>
+<li>
+<p>例如：注册全局组件、注册全局指令等。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//注册全局组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;MyButton&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="o">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;button @click=&#34;count++&#34;&gt;Clicked {{ count }} times.&lt;/button&gt;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//注册全局指令
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">Vue</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;focus&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inserted</span><span class="o">:</span> <span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>Vue3.0 中对这些 API 做出了调整：</p>
+<ul>
+<li>将全局的 API，即：<code>Vue.xxx</code>调整到应用实例（<code>app</code>）上
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>2.x 全局 API（<code>Vue</code>）</th>
+<th>3.x 实例 API (<code>app</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vue.config.xxxx</td>
+<td>app.config.xxxx</td>
+</tr>
+<tr>
+<td>Vue.config.productionTip</td>
+<td><!-- raw HTML omitted -->移除<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>Vue.component</td>
+<td>app.component</td>
+</tr>
+<tr>
+<td>Vue.directive</td>
+<td>app.directive</td>
+</tr>
+<tr>
+<td>Vue.mixin</td>
+<td>app.mixin</td>
+</tr>
+<tr>
+<td>Vue.use</td>
+<td>app.use</td>
+</tr>
+<tr>
+<td>Vue.prototype</td>
+<td>app.config.globalProperties</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2其他改变">2.其他改变</h2>
+<ul>
+<li>
+<p>data 选项应始终被声明为一个函数。</p>
+</li>
+<li>
+<p>过度类名的更改：</p>
+<ul>
+<li>
+<p>Vue2.x 写法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-enter</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-leave-to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-leave</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-enter-to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Vue3.x 写法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-enter-from</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-leave-to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-leave-from</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">v-enter-to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->移除<!-- raw HTML omitted -->keyCode 作为 v-on 的修饰符，同时也不再支持<code>config.keyCodes</code></p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->移除<!-- raw HTML omitted --><code>v-on.native</code>修饰符</p>
+<ul>
+<li>
+<p>父组件中绑定事件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">my-component</span>
+</span></span><span class="line"><span class="cl">  <span class="na">v</span><span class="nt">-on:close</span><span class="s">=&#34;handleComponentEvent&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">v</span><span class="nt">-on:click</span><span class="s">=&#34;handleNativeClickEvent&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>子组件中声明自定义事件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">emits</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;close&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->移除<!-- raw HTML omitted -->过滤器（filter）</p>
+<blockquote>
+<p>过滤器虽然这看起来很方便，但它需要一个自定义语法，打破大括号内表达式是 “只是 JavaScript” 的假设，这不仅有学习成本，而且有实现成本！建议用方法调用或计算属性去替换过滤器。</p>
+</blockquote>
+</li>
+<li>
+<p>&hellip;&hellip;</p>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+	
+	<section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 May 15, 2022 01:06 CST
+        </span>
+    </section></footer>
+
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 玮
+        
+        </section>
+        <br/>
+        
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1vue3-简介">1.Vue3 简介</a></li>
+    <li><a href="#2vue3-带来了什么">2.Vue3 带来了什么</a>
+      <ol>
+        <li><a href="#1性能的提升">1.性能的提升</a></li>
+        <li><a href="#2源码的升级">2.源码的升级</a></li>
+        <li><a href="#3拥抱-typescript">3.拥抱 TypeScript</a></li>
+        <li><a href="#4新的特性">4.新的特性</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#1使用-vue-cli-创建">1.使用 vue-cli 创建</a></li>
+    <li><a href="#2使用-vite-创建">2.使用 vite 创建</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1拉开序幕的-setup">1.拉开序幕的 setup</a></li>
+    <li><a href="#2ref-函数">2.ref 函数</a></li>
+    <li><a href="#3reactive-函数">3.reactive 函数</a></li>
+    <li><a href="#4vue30-中的响应式原理">4.Vue3.0 中的响应式原理</a>
+      <ol>
+        <li><a href="#vue2x-的响应式">vue2.x 的响应式</a></li>
+        <li><a href="#vue30-的响应式">Vue3.0 的响应式</a></li>
+      </ol>
+    </li>
+    <li><a href="#5reactive-对比-ref">5.reactive 对比 ref</a></li>
+    <li><a href="#6setup-的两个注意点">6.setup 的两个注意点</a></li>
+    <li><a href="#7计算属性与监视">7.计算属性与监视</a>
+      <ol>
+        <li><a href="#1computed-函数">1.computed 函数</a></li>
+        <li><a href="#2watch-函数">2.watch 函数</a></li>
+        <li><a href="#3watcheffect-函数">3.watchEffect 函数</a></li>
+      </ol>
+    </li>
+    <li><a href="#8生命周期">8.生命周期</a></li>
+    <li><a href="#9自定义-hook-函数">9.自定义 hook 函数</a></li>
+    <li><a href="#10toref">10.toRef</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1shallowreactive-与-shallowref">1.shallowReactive 与 shallowRef</a></li>
+    <li><a href="#2readonly-与-shallowreadonly">2.readonly 与 shallowReadonly</a></li>
+    <li><a href="#3toraw-与-markraw">3.toRaw 与 markRaw</a></li>
+    <li><a href="#4customref">4.customRef</a></li>
+    <li><a href="#5provide-与-inject">5.provide 与 inject</a></li>
+    <li><a href="#6响应式数据的判断">6.响应式数据的判断</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1options-api-存在的问题">1.Options API 存在的问题</a></li>
+    <li><a href="#2composition-api-的优势">2.Composition API 的优势</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1fragment">1.Fragment</a></li>
+    <li><a href="#2teleport">2.Teleport</a></li>
+    <li><a href="#3suspense">3.Suspense</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#1全局-api-的转移">1.全局 API 的转移</a></li>
+    <li><a href="#2其他改变">2.其他改变</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/js/nprogress.min.js"
+  integrity="sha384-bHDlAEUFxsRI7JfULv3DTpL2IXbbgn4JHQJibgo5iiXSK6Iu8muwqHANhun74Cqg"
+  crossorigin="anonymous"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/css/nprogress.css"
+  integrity="sha384-KJyhr2syt5+4M9Pz5dipCvTrtvOmLk/olWVdfhAp858UCa64Ia5GFpTN7+G4BWpE"
+  crossorigin="anonymous"
+/>
+<script>
+  NProgress.start();
+  document.addEventListener('readystatechange', () => {
+    if (document.readyState === 'interactive') NProgress.inc(0.8);
+    if (document.readyState === 'complete') NProgress.done();
+  });
+</script>
+
+<script
+  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  async
+></script>
+
+
+    </body>
+</html>
