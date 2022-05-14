@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='推荐大家安装的 VScode 中的 Vue 插件  Vue 3 Snippets https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets Vetur https://marketplace.visualstudio.com/items?itemName=octref.vetur  什么是 vue  构建用户界面  用 vue 往 html 页面中填充数据，非常的方便   框架  框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！ 要学习 vue，就是在学习 vue 框架中规定的用法！ vue 的指令、组件（是对 UI 结构的复用）、路由、Vuex、vue 组件库 只有把上面老师罗列的内容掌握以后，才有开发 vue 项目的能力！    vue 的两个特性   数据驱动视图：
+ 数据的变化会驱动视图自动更新 好处：程序员只管把数据维护好，那么页面结构会被 vue 自动渲染出来！    双向数据绑定：
+ 在网页中，form 表单负责采集数据，Ajax 负责提交数据。
+  js 数据的变化，会被自动渲染到页面上 页面上表单采集的数据发生变化的时候，会被 vue 自动获取到，并更新到 js 数据中     注意：数据驱动视图和双向数据绑定的底层原理是 MVVM（Mode 数据源、View 视图、ViewModel 就是 vue 的实例）'><title>Day1</title>
+
+<link rel='canonical' href='https://example.com/2022/day1/'>
+
+<link rel="stylesheet" href="/scss/style.min.456731ecf5fa3c77397c4547fa8f7804816f37efb0713bedfb842d699c1bc4c7.css"><meta property='og:title' content='Day1'>
+<meta property='og:description' content='推荐大家安装的 VScode 中的 Vue 插件  Vue 3 Snippets https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets Vetur https://marketplace.visualstudio.com/items?itemName=octref.vetur  什么是 vue  构建用户界面  用 vue 往 html 页面中填充数据，非常的方便   框架  框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！ 要学习 vue，就是在学习 vue 框架中规定的用法！ vue 的指令、组件（是对 UI 结构的复用）、路由、Vuex、vue 组件库 只有把上面老师罗列的内容掌握以后，才有开发 vue 项目的能力！    vue 的两个特性   数据驱动视图：
+ 数据的变化会驱动视图自动更新 好处：程序员只管把数据维护好，那么页面结构会被 vue 自动渲染出来！    双向数据绑定：
+ 在网页中，form 表单负责采集数据，Ajax 负责提交数据。
+  js 数据的变化，会被自动渲染到页面上 页面上表单采集的数据发生变化的时候，会被 vue 自动获取到，并更新到 js 数据中     注意：数据驱动视图和双向数据绑定的底层原理是 MVVM（Mode 数据源、View 视图、ViewModel 就是 vue 的实例）'>
+<meta property='og:url' content='https://example.com/2022/day1/'>
+<meta property='og:site_name' content='玮'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-14T21:57:22&#43;08:00'/>
+<meta name="twitter:title" content="Day1">
+<meta name="twitter:description" content="推荐大家安装的 VScode 中的 Vue 插件  Vue 3 Snippets https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets Vetur https://marketplace.visualstudio.com/items?itemName=octref.vetur  什么是 vue  构建用户界面  用 vue 往 html 页面中填充数据，非常的方便   框架  框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！ 要学习 vue，就是在学习 vue 框架中规定的用法！ vue 的指令、组件（是对 UI 结构的复用）、路由、Vuex、vue 组件库 只有把上面老师罗列的内容掌握以后，才有开发 vue 项目的能力！    vue 的两个特性   数据驱动视图：
+ 数据的变化会驱动视图自动更新 好处：程序员只管把数据维护好，那么页面结构会被 vue 自动渲染出来！    双向数据绑定：
+ 在网页中，form 表单负责采集数据，Ajax 负责提交数据。
+  js 数据的变化，会被自动渲染到页面上 页面上表单采集的数据发生变化的时候，会被 vue 自动获取到，并更新到 js 数据中     注意：数据驱动视图和双向数据绑定的底层原理是 MVVM（Mode 数据源、View 视图、ViewModel 就是 vue 的实例）">
+    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/WechatIMG1_hu3e475a1a2ee85b856cd982cc46c8d9eb_97256_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">💬</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">玮</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/home?lang=zh'
+                        target="_blank"
+                        title="Qing"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/wei-zhong1'
+                        target="_blank"
+                        title="Wei"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/vue/" style="background-color: #80aba9; color: #fff;">
+                Vue
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/2022/day1/">Day1</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 14, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="推荐大家安装的-vscode-中的-vue-插件">推荐大家安装的 VScode 中的 Vue 插件</h3>
+<ol>
+<li>Vue 3 Snippets <a class="link" href="https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets"  target="_blank" rel="noopener"
+    >https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets</a></li>
+<li>Vetur <a class="link" href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"  target="_blank" rel="noopener"
+    >https://marketplace.visualstudio.com/items?itemName=octref.vetur</a></li>
+</ol>
+<h3 id="什么是-vue">什么是 vue</h3>
+<ol>
+<li>构建用户界面
+<ul>
+<li>用 vue 往 html 页面中填充数据，非常的方便</li>
+</ul>
+</li>
+<li>框架
+<ul>
+<li>框架是一套现成的解决方案，程序员只能遵守框架的规范，去编写自己的业务功能！</li>
+<li>要学习 vue，就是在学习 vue 框架中规定的用法！</li>
+<li>vue 的指令、组件（是对 UI 结构的复用）、路由、Vuex、vue 组件库</li>
+<li>只有把上面老师罗列的内容掌握以后，才有开发 vue 项目的能力！</li>
+</ul>
+</li>
+</ol>
+<h3 id="vue-的两个特性">vue 的两个特性</h3>
+<ol>
+<li>
+<p>数据驱动视图：</p>
+<ul>
+<li>数据的变化<strong>会驱动视图</strong>自动更新</li>
+<li>好处：程序员只管把数据维护好，那么页面结构会被 vue 自动渲染出来！</li>
+</ul>
+</li>
+<li>
+<p>双向数据绑定：</p>
+<blockquote>
+<p>在网页中，form 表单负责<strong>采集数据</strong>，Ajax 负责<strong>提交数据</strong>。</p>
+</blockquote>
+<ul>
+<li>js 数据的变化，会被自动渲染到页面上</li>
+<li>页面上表单采集的数据发生变化的时候，会被 vue 自动获取到，并更新到 js 数据中</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>注意：数据驱动视图和双向数据绑定的底层原理是 MVVM（Mode 数据源、View 视图、ViewModel 就是 vue 的实例）</p>
+</blockquote>
+<h3 id="vue-指令">vue 指令</h3>
+<h4 id="1-内容渲染指令">1. 内容渲染指令</h4>
+<ol>
+<li><code>v-text</code> 指令的缺点：会覆盖元素内部原有的内容！</li>
+<li><code>{{ }}</code> 插值表达式：在实际开发中用的最多，只是内容的占位符，不会覆盖原有的内容！</li>
+<li><code>v-html</code> 指令的作用：可以把带有标签的字符串，渲染成真正的 HTML 内容！</li>
+</ol>
+<h4 id="2-属性绑定指令">2. 属性绑定指令</h4>
+<blockquote>
+<p>注意：插值表达式只能用在元素的<strong>内容节点</strong>中，不能用在元素的<strong>属性节点</strong>中！</p>
+</blockquote>
+<ul>
+<li>
+<p>在 vue 中，可以使用 <code>v-bind:</code> 指令，为元素的属性动态绑定值；</p>
+</li>
+<li>
+<p>简写是英文的 <code>:</code></p>
+</li>
+<li>
+<p>在使用 v-bind 属性绑定期间，如果绑定内容需要进行动态拼接，则字符串的外面应该包裹单引号，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;div</span> <span class="na">:title=</span><span class="s">&#34;&#39;box&#39; + index&#34;</span><span class="nt">&gt;</span>这是一个 div<span class="nt">&lt;/div&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="3-事件绑定">3. 事件绑定</h4>
+<ol>
+<li>
+<p><code>v-on:</code> 简写是 <code>@</code></p>
+</li>
+<li>
+<p>语法格式为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;button</span> <span class="err">@</span><span class="na">click=</span><span class="s">&#34;add&#34;</span><span class="nt">&gt;&lt;/button&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">methods: {
+</span></span><span class="line"><span class="cl">   add() {
+</span></span><span class="line"><span class="cl">			// 如果在方法中要修改 data 中的数据，可以通过 this 访问到
+</span></span><span class="line"><span class="cl">			this.count += 1
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>$event</code> 的应用场景：如果默认的事件对象 e 被覆盖了，则可以手动传递一个 $event。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;button</span> <span class="err">@</span><span class="na">click=</span><span class="s">&#34;add(3, $event)&#34;</span><span class="nt">&gt;&lt;/button&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">methods: {
+</span></span><span class="line"><span class="cl">   add(n, e) {
+</span></span><span class="line"><span class="cl">			// 如果在方法中要修改 data 中的数据，可以通过 this 访问到
+</span></span><span class="line"><span class="cl">			this.count += 1
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>事件修饰符：</p>
+<ul>
+<li>
+<p><code>.prevent</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;a</span> <span class="err">@</span><span class="na">click.prevent=</span><span class="s">&#34;xxx&#34;</span><span class="nt">&gt;</span>链接<span class="nt">&lt;/a&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>.stop</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;button</span> <span class="err">@</span><span class="na">click.stop=</span><span class="s">&#34;xxx&#34;</span><span class="nt">&gt;</span>按钮<span class="nt">&lt;/button&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+<h4 id="4-v-model-指令">4. v-model 指令</h4>
+<ol>
+<li>input 输入框
+<ul>
+<li>type=&ldquo;radio&rdquo;</li>
+<li>type=&ldquo;checkbox&rdquo;</li>
+<li>type=&ldquo;xxxx&rdquo;</li>
+</ul>
+</li>
+<li>textarea</li>
+<li>select</li>
+</ol>
+<h4 id="5-条件渲染指令">5. 条件渲染指令</h4>
+<ol>
+<li><code>v-show</code> 的原理是：动态为元素添加或移除 <code>display: none</code> 样式，来实现元素的显示和隐藏
+<ul>
+<li>如果要频繁的切换元素的显示状态，用 v-show 性能会更好</li>
+</ul>
+</li>
+<li><code>v-if</code> 的原理是：每次动态创建或移除元素，实现元素的显示和隐藏
+<ul>
+<li>如果刚进入页面的时候，某些元素默认不需要被展示，而且后期这个元素很可能也不需要被展示出来，此时 v-if 性能更好</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>在实际开发中，绝大多数情况，不用考虑性能问题，直接使用 v-if 就好了！！！</p>
+</blockquote>
+<p>v-if 指令在使用的时候，有两种方式：</p>
+<ol>
+<li>
+<p>直接给定一个布尔值 true 或 false</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>被 v-if 控制的元素<span class="nt">&lt;/p&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>给 v-if 提供一个判断条件，根据判断的结果是 true 或 false，来控制元素的显示和隐藏</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">&#34;type === &#39;A&#39;&#34;</span><span class="nt">&gt;</span>良好<span class="nt">&lt;/p&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span></span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 May 14, 2022 21:57 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/2022/day2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Day2</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 玮
+        
+        </section>
+        <br/>
+        
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#推荐大家安装的-vscode-中的-vue-插件">推荐大家安装的 VScode 中的 Vue 插件</a></li>
+        <li><a href="#什么是-vue">什么是 vue</a></li>
+        <li><a href="#vue-的两个特性">vue 的两个特性</a></li>
+        <li><a href="#vue-指令">vue 指令</a>
+          <ol>
+            <li><a href="#1-内容渲染指令">1. 内容渲染指令</a></li>
+            <li><a href="#2-属性绑定指令">2. 属性绑定指令</a></li>
+            <li><a href="#3-事件绑定">3. 事件绑定</a></li>
+            <li><a href="#4-v-model-指令">4. v-model 指令</a></li>
+            <li><a href="#5-条件渲染指令">5. 条件渲染指令</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/js/nprogress.min.js"
+  integrity="sha384-bHDlAEUFxsRI7JfULv3DTpL2IXbbgn4JHQJibgo5iiXSK6Iu8muwqHANhun74Cqg"
+  crossorigin="anonymous"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/zhixuan2333/gh-blog@v0.1.0/css/nprogress.css"
+  integrity="sha384-KJyhr2syt5+4M9Pz5dipCvTrtvOmLk/olWVdfhAp858UCa64Ia5GFpTN7+G4BWpE"
+  crossorigin="anonymous"
+/>
+<script>
+  NProgress.start();
+  document.addEventListener('readystatechange', () => {
+    if (document.readyState === 'interactive') NProgress.inc(0.8);
+    if (document.readyState === 'complete') NProgress.done();
+  });
+</script>
+
+<script
+  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  async
+></script>
+
+
+    </body>
+</html>

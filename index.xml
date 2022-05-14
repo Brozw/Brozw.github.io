@@ -5,13 +5,12 @@
         <link>https://example.com/</link>
         <description>Recent content on 玮</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>zh-cn</language><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Day1</title>
-        <link>https://example.com/p/day1/</link>
+        <link>https://example.com/2022/day1/</link>
         <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/day1/</guid>
+        <guid>https://example.com/2022/day1/</guid>
         <description>&lt;h3 id=&#34;推荐大家安装的-vscode-中的-vue-插件&#34;&gt;推荐大家安装的 VScode 中的 Vue 插件&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Vue 3 Snippets &lt;a class=&#34;link&#34; href=&#34;https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -228,10 +227,10 @@
         </item>
         <item>
         <title>Day2</title>
-        <link>https://example.com/p/day2/</link>
+        <link>https://example.com/2022/day2/</link>
         <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/day2/</guid>
+        <guid>https://example.com/2022/day2/</guid>
         <description>&lt;h2 id=&#34;过滤器&#34;&gt;过滤器&lt;/h2&gt;
 &lt;h3 id=&#34;过滤器的注意点&#34;&gt;过滤器的注意点&lt;/h3&gt;
 &lt;ol&gt;
@@ -382,27 +381,11 @@
 </description>
         </item>
         <item>
-        <title>Archives</title>
+        <title>归档</title>
         <link>https://example.com/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://example.com/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://example.com/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/search/</guid>
         <description></description>
         </item>
         <item>
@@ -411,6 +394,22 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/%E5%85%B3%E4%BA%8E/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://example.com/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://example.com/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         
