@@ -7,20 +7,20 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java</title>
+        <link>https://example.com/categories/java/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/java/</guid>
+        <description>&lt;img src="https://s2.loli.net/2022/05/15/bCdIf8KlzJvNeR7.png" alt="Featured image of post Java" /&gt;</description>
+        </item>
+        <item>
         <title>Markdown</title>
         <link>https://example.com/categories/mark/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://example.com/categories/mark/</guid>
         <description>&lt;img src="https://s2.loli.net/2022/05/15/OUx2kCmMyd4oV5K.png" alt="Featured image of post Markdown" /&gt;</description>
-        </item>
-        <item>
-        <title>Vue3</title>
-        <link>https://example.com/categories/vue3/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://example.com/categories/vue3/</guid>
-        <description>&lt;img src="https://s2.loli.net/2022/05/15/kjvL6BO1PrA4VHb.png" alt="Featured image of post Vue3" /&gt;</description>
         </item>
         
     </channel>

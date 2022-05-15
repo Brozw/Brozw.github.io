@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Java on 玮</title>
+        <link>https://example.com/categories/java/</link>
+        <description>Recent content in Java on 玮</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language><atom:link href="https://example.com/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>起源</title>
+        <link>https://example.com/2022/%E8%B5%B7%E6%BA%90/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/2022/%E8%B5%B7%E6%BA%90/</guid>
+        <description>&lt;h1 id=&#34;java-起源&#34;&gt;Java 起源&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2022/05/15/bCdIf8KlzJvNeR7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Java&#34;
+	
+	
+&gt;
+x
+1990 年代初，Sun 公司预计嵌入式系统会在家电领域出色，成立由詹姆斯·高斯林主导的“Green 计划”，目标设置在&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e5%ae%b6%e7%94%a8%e7%94%b5%e5%99%a8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;家用电器&lt;/a&gt;等小型系统的&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e7%a8%8b%e5%bc%8f%e8%aa%9e%e8%a8%80&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;编程语言&lt;/a&gt;，应用在&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e7%94%b5%e8%a7%86%e6%9c%ba&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电视机&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e7%94%b5%e8%af%9d&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;电话&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e9%97%b9%e9%92%9f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;闹钟&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%e7%83%a4%e9%9d%a2%e5%8c%85%e6%9c%ba&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;烤面包机&lt;/a&gt;等家用电器的通用控制和通信&lt;/p&gt;
+&lt;p&gt;1992 年夏天，Green 计划实现了 Green 操作系统，Oak 程序设计语言等，同年 11 月，Green 计划被转化为 Sun 公司的一个全资子公司“FirstPerson 有限公司”&lt;/p&gt;
+&lt;p&gt;1994 年夏天，由于互联网兴起，詹姆斯·高斯林对 Oak 进行改造，同年秋，完成了第一个 Java 语言的网页浏览器：WebRunner,Sun 公司给予高度评价，由于 Oak 商标已被注册，改名为 Java&lt;/p&gt;
+&lt;p&gt;1995 年初，正式发布&lt;/p&gt;
+&lt;p&gt;1996 年初，Sun 发布 JDK1.0 包括运行环境（JRE&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;)，开发环境（JDK&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2022/05/15/yIUSuexo8bBhLDP.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;JRE与JDK的关系&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1997 年 2 月 18 日，Sun 发布 JDK1.1,增加 JIT(即时编译&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;)编译器&lt;/p&gt;
+&lt;p&gt;1998 年 12 月，Sun 发布 JDK1.2、JSP/Servlet、EJB 等规范，将 Java 分为 J2EE&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;、J2SE&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;、J2ME&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;，并将 API 分为核心 API，可选 API，特殊 API&lt;/p&gt;
+&lt;p&gt;2002 年 2 月，Sun 发布 JDK1.4,可以实现大多数应用&lt;/p&gt;
+&lt;p&gt;2004 年 10 月，Sun 发布 JDK1.5，改名为 Java SE5.0,增加泛型，增强型 for 循环语句等功能&lt;/p&gt;
+&lt;p&gt;2009 年，Sun 公司被 Oracle 收购&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/calm_encode/article/details/106642555&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;详情&lt;/a&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;JVM+核心类库（解释 class 文件）&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;JRE+编译工具（javac 等命令）&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;传统编译器编译一条指令运行结束会将其销毁，JIT 编译器会将常用的指令保存在内存中，下次调用不需要再次编译&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;主要控制移动设备和信息家电优先存储的设备&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Java 技术的核心和基础&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Java 应用最广泛的地方&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+        </item>
+        <item>
+        <title>运行机制</title>
+        <link>https://example.com/2022/%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/2022/%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/</guid>
+        <description>&lt;h2 id=&#34;高级语言程序设计执行方式&#34;&gt;高级语言程序设计执行方式&lt;/h2&gt;
+&lt;h3 id=&#34;编译型&#34;&gt;编译型&lt;/h3&gt;
+&lt;p&gt;通过专门的编译器针对特定的操作系统先一次性将高级语言源代码解释转成**&lt;em&gt;平台硬件&lt;/em&gt;&lt;strong&gt;执行的&lt;/strong&gt;&lt;em&gt;机器码&lt;/em&gt;&lt;strong&gt;（机器指令&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;和操作数&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;），并包装成该平台所能识别的&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;em&gt;可执行程序&lt;/em&gt;**&lt;!-- raw HTML omitted --&gt;格式，之后直接运行可执行文件，转换过程称为：编译，编译生成的可执行文件可以脱离开发环境执行，运行效率高，但移植性较差，需要将源代码复制到另一个平台通过该平台特定的编译器重新编译&lt;/p&gt;
+&lt;h3 id=&#34;解释型&#34;&gt;解释型&lt;/h3&gt;
+&lt;p&gt;通过专门的解释器对源代码进行解释成特定平台的机器码并立即执行，相当与编译和运行同时进行，&lt;!-- raw HTML omitted --&gt;也等同于每次执行程序都需要编译，运行效率低&lt;!-- raw HTML omitted --&gt;，移植性较强，只需提供特定平台的解释器，&lt;/p&gt;
+&lt;h2 id=&#34;java-运行机制与-jvm&#34;&gt;Java 运行机制与 JVM&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s2.loli.net/2022/05/15/q384Ao1E5yhJRiK.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;运行机制&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;运行机制&#34;&gt;运行机制&lt;/h4&gt;
+&lt;p&gt;Java 编写的程序&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;编译器生成字节码（*class 文件）&lt;/li&gt;
+&lt;li&gt;由特定平台的解释器解释运行字节码文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;jvm&#34;&gt;JVM&lt;/h4&gt;
+&lt;p&gt;Java 虚拟机，运行 Java 字节码文件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;_ 重点_&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;编译器面向 JVM，不同平台具备不同的 JVM,但编译器提供相同的接口连接不同平台平台的 JVM 来运行字节码文件&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;机器语言是用&lt;a class=&#34;link&#34; href=&#34;https://zh.m.wikipedia.org/wiki/%e4%ba%8c%e8%bf%9b%e5%88%b6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;二进制&lt;/a&gt;代码表示的、&lt;a class=&#34;link&#34; href=&#34;https://zh.m.wikipedia.org/wiki/%e7%94%b5%e5%ad%90%e8%ae%a1%e7%ae%97%e6%9c%ba&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;计算机&lt;/a&gt;能直接识别和执行的一种机器指令的集合&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;操作数（operand)，是 &lt;a class=&#34;link&#34; href=&#34;http://baike.baidu.com/view/786118.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;计算机指令&lt;/a&gt;中的一个组成部分，它规定了指令中进行数字运算的量&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
