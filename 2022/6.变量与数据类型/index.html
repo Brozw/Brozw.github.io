@@ -3,21 +3,27 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='变量是程序的基本组成单位
  Java 的变量规范  所有变量必须先声明后使用 相同类型的变量之间允许赋值  声明方式 1 2 3 4  type varName = 初始值 int x = 100;   类型 基本数据和引用数据
-基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）'><title>6.变量与数据类型</title>
+引用数据类型
+对一个对象的引用（指针）
+基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   表示范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）'><title>6.变量与数据类型</title>
 
 <link rel='canonical' href='https://example.com/2022/6.%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
 
 <link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='6.变量与数据类型'>
 <meta property='og:description' content='变量是程序的基本组成单位
  Java 的变量规范  所有变量必须先声明后使用 相同类型的变量之间允许赋值  声明方式 1 2 3 4  type varName = 初始值 int x = 100;   类型 基本数据和引用数据
-基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）'>
+引用数据类型
+对一个对象的引用（指针）
+基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   表示范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）'>
 <meta property='og:url' content='https://example.com/2022/6.%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/'>
 <meta property='og:site_name' content='玮'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-15T22:15:52&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-16T16:40:53&#43;08:00'/>
 <meta name="twitter:title" content="6.变量与数据类型">
 <meta name="twitter:description" content="变量是程序的基本组成单位
  Java 的变量规范  所有变量必须先声明后使用 相同类型的变量之间允许赋值  声明方式 1 2 3 4  type varName = 初始值 int x = 100;   类型 基本数据和引用数据
-基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）">
+引用数据类型
+对一个对象的引用（指针）
+基本数据类型  整数类型：byte，short，int，long(存放整数值) 浮点数类型：float，double（存放小数） 字符类型：char（表示单个字符） 布尔类型：boolean  字节数 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  ┌───┐ byte │ │ └───┘ ┌───┬───┐ short │ │ │ └───┴───┘ ┌───┬───┬───┬───┐ int │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ long │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┬───┬───┐ float │ │ │ │ │ └───┴───┴───┴───┘ ┌───┬───┬───┬───┬───┬───┬───┬───┐ double │ │ │ │ │ │ │ │ │ └───┴───┴───┴───┴───┴───┴───┴───┘ ┌───┬───┐ char │ │ │ └───┴───┘   表示范围 整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）">
     <link rel="shortcut icon" href="/img/favicon.png" />
 
     </head>
@@ -349,6 +355,8 @@
 	
 	
 ></p>
+<p><strong><em>引用数据类型</em></strong></p>
+<p>对一个对象的引用（指针）</p>
 <h3 id="基本数据类型">基本数据类型</h3>
 <ul>
 <li>整数类型：byte，short，int，long(存放整数值)</li>
@@ -405,7 +413,7 @@
 </span></span><span class="line"><span class="cl">       └───┴───┘
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="范围">范围</h4>
+</div><h4 id="表示范围">表示范围</h4>
 <p>整型（最高位的 bit 表示符号位（0 表示正数，1 表示负数）</p>
 <p><img src="https://s2.loli.net/2022/05/15/fOueQWLoyKlBFwP.png"
 	
@@ -429,15 +437,152 @@
 <li>数据类型所占字节数不受操作系统发生改变</li>
 <li>整型常量默认为 int，不足在后加 L</li>
 <li>1 字节 8 位</li>
-<li>浮点数=符号位+指数位+尾数位，尾数部分可能丢失，造成精度损失(小数都是近似值）<a class="link" href="https://akaedu.github.io/book/ch14s04.html"  target="_blank" rel="noopener"
+<li><strong><em>浮点数=符号位+指数位+尾数位</em></strong>，尾数部分可能丢失，造成精度损失(小数都是近似值）<a class="link" href="https://akaedu.github.io/book/ch14s04.html"  target="_blank" rel="noopener"
     >详情</a></li>
 <li>转义字符 <a class="link" href="https://www.cnblogs.com/xuwc/p/13308822.html"  target="_blank" rel="noopener"
-    >详情</a></li>
-<li>char 的本质是整数，对应 Unicode 码字符</li>
+    >详情</a>,char 输出转义字符会表示转义</li>
+<li><strong><em><!-- raw HTML omitted -->char 的本质是整数，对应 Unicode 码字符<!-- raw HTML omitted --></em></strong></li>
 <li>字符型表现形式：单个字符+转义字符+Unicode 值</li>
 <li>char 存储：a=&gt;97=&gt;二进制=&gt;存储</li>
 <li>char 输出：二进制=&gt;97=&gt;a=&gt;显示</li>
+<li>规定浮点数二进制表示= 1.XXX x 2<!-- raw HTML omitted -->N<!-- raw HTML omitted -->，有效数字 2<!-- raw HTML omitted -->23<!-- raw HTML omitted -->=8388608（7 位数）</li>
+<li>小数默认以 double 存放，若想让编译器理解成 float 在之后 f</li>
+<li>单精度够用就不要用双精度，浪费空间</li>
 </ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//字符型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Basic</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">char</span> <span class="n">word</span> <span class="o">=</span> <span class="n">97</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">        输出为a,本质为整数，在内存中存储为整数
+</span></span></span><span class="line"><span class="cl"><span class="cm">        输出所给整数对应的Unicode编码字符
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">word3</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">word3</span><span class="o">);</span><span class="c1">//输出为97
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">char</span> <span class="n">word1</span> <span class="o">=</span> <span class="sc">&#39;\r&#39;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">word1</span><span class="o">);</span><span class="c1">//输出为回车
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">char</span> <span class="n">word2</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">word2</span><span class="o">);</span><span class="c1">//输出为a
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="浮点数细节">浮点数细节</h5>
+<h6 id="进制转换">进制转换</h6>
+<p><img src="https://s2.loli.net/2022/05/16/cRxe92HmBjJudEz.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="对照表格">对照表格</h6>
+<p><img src="https://s2.loli.net/2022/05/16/ZRjhyqs32ULIuiN.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="原理">原理</h6>
+<p><img src="https://s2.loli.net/2022/05/16/59f2tFyuprvOlIM.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="简单方法">简单方法</h6>
+<p><img src="https://s2.loli.net/2022/05/16/3UNDAa4lP6bjepS.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="精度损失">精度损失</h6>
+<p><img src="https://s2.loli.net/2022/05/16/y37qFtEaeRV1W9n.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="科学计数法">科学计数法</h6>
+<p><img src="https://s2.loli.net/2022/05/16/bG5QhmvtDfn1FMY.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="ieee754">IEEE754</h6>
+<p><img src="https://s2.loli.net/2022/05/16/b8RCepIlKt2dzP7.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h6 id="浮点数的限制">浮点数的限制</h6>
+<p><img src="https://s2.loli.net/2022/05/16/OIX9gvY6kG2nANu.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>最高位为符号位（+，-）</p>
+<p>小数位存放省去整数位的 1 的有效二进制位</p>
+<p>指数位偏移 127（+127/1023）来表示</p>
+<p><img src="https://s2.loli.net/2022/05/16/2OLKuaMBHWfXh1D.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://s2.loli.net/2022/05/16/oUrVzeZajAixmJn.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <h3 id="基本数据类型赋值机制">基本数据类型赋值机制</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -603,7 +748,7 @@
 
 
         <span>
-            最后更新于 May 15, 2022 22:15 CST
+            最后更新于 May 16, 2022 16:40 CST
         </span>
     </section></footer>
 
@@ -809,7 +954,7 @@
         <li><a href="#基本数据类型">基本数据类型</a>
           <ol>
             <li><a href="#字节数">字节数</a></li>
-            <li><a href="#范围">范围</a></li>
+            <li><a href="#表示范围">表示范围</a></li>
             <li><a href="#使用细节">使用细节</a></li>
           </ol>
         </li>
