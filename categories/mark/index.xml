@@ -6,35 +6,51 @@
         <description>Recent content in Markdown on 玮</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language><atom:link href="https://example.com/categories/mark/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Markdown</title>
-        <link>https://example.com/2022/markdown/</link>
+        <title>Basic 语法</title>
+        <link>https://example.com/2022/basic-%E8%AF%AD%E6%B3%95/</link>
         <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/2022/markdown/</guid>
-        <description>&lt;h1 id=&#34;斜体和粗体&#34;&gt;斜体和粗体&lt;/h1&gt;
-&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;
+        <guid>https://example.com/2022/basic-%E8%AF%AD%E6%B3%95/</guid>
+        <description>&lt;p&gt;[toc]&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;command  +/-提高降低标题级别&lt;/p&gt;
+&lt;p&gt;command + /进入源代码模式查看具体代码&lt;/p&gt;
+&lt;h2 id=&#34;字体样式&#34;&gt;字体样式&lt;/h2&gt;
+&lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1.*斜体*或_斜体_
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2.**粗体**
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1.*斜体*或_斜体_     （command i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2.**粗体B)           (command B)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3.***加粗斜体***
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4.~~删除线~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5.下划线       &amp;lt;u&amp;gt;&amp;lt;/u&amp;gt;    (command u)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;6.==高亮==       command shift h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7.上标^3^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;8.下标~3~
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;样式&#34;&gt;样式：&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;样式&#34;&gt;样式&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;粗体&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;加粗粗体&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;删除线&lt;/del&gt;&lt;/p&gt;
-&lt;h1 id=&#34;分级标题&#34;&gt;分级标题&lt;/h1&gt;
-&lt;h2 id=&#34;代码-1&#34;&gt;代码&lt;/h2&gt;
-&lt;h3 id=&#34;第一种写法&#34;&gt;第一种写法&lt;/h3&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;下划线&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;==高亮==&lt;/p&gt;
+&lt;p&gt;cm^3^&lt;/p&gt;
+&lt;p&gt;H~2~O&lt;/p&gt;
+&lt;h2 id=&#34;分级标题&#34;&gt;分级标题&lt;/h2&gt;
+&lt;h3 id=&#34;代码-1&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;第一种写法&#34;&gt;第一种写法&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -49,7 +65,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------------------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;第二种写法&#34;&gt;第二种写法&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;第二种写法&#34;&gt;第二种写法&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -60,7 +76,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 一级标题
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 一级标题（快捷键command+级别数）
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 二级标题
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 三级标题
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#### 四级标题
@@ -68,11 +84,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;###### 六级标题
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;超链接&#34;&gt;超链接&lt;/h1&gt;
-&lt;h2 id=&#34;行内式&#34;&gt;行内式&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;/div&gt;&lt;h2 id=&#34;超链接&#34;&gt;超链接&lt;/h2&gt;
+&lt;h3 id=&#34;行内式&#34;&gt;行内式&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;[ ]里写链接文字，( )里写链接地址, ( )中的”“中可以为链接指定 title 属性，title 属性可加可不加。title 属性的效果是鼠标悬停在链接上会出现指定的 title 文字。[链接文字](链接地址 “链接标题”)’这样的形式。链接地址与链接标题前有一个空格&lt;/p&gt;
-&lt;h3 id=&#34;代码-2&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-2&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -83,16 +99,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;欢迎来到[梵居闹市](http://blog.leanote.com/freewalk &amp;#34;梵居闹市&amp;#34;)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-1&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-1&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.leanote.com/freewalk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;梵居闹市&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考式&#34;&gt;参考式&lt;/h2&gt;
+&lt;h3 id=&#34;参考式&#34;&gt;参考式&lt;/h3&gt;
 &lt;p&gt;参考式超链接一般用在学术论文上面，或者另一种情况，如果某一个链接在文章中多处使用，那么使用引用 的方式创建链接将非常好，它可以让你对链接进行统一的管理&lt;/p&gt;
-&lt;h3 id=&#34;语法说明-1&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-1&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;参考式链接分为两部分，文中的写法 [链接文字][链接标记]，在文本的任意位置添加[链接标记]:链接地址 “链接标题”，链接地址与链接标题前有一个空格。&lt;/p&gt;
 &lt;p&gt;如果链接文字本身可以做为链接标记，你也可以写成[链接文字][]
 [链接文字]：链接地址的形式，见代码的最后一行。&lt;/p&gt;
-&lt;h3 id=&#34;代码-3&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-3&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -111,15 +127,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[网站]:http://http://blog.leanote.com/freewalk
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-2&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-2&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;我经常去的几个网站[Google][1]、[Leanote][2]以及[自己的博客][3]
 [Leanote 笔记][2]是一个不错的[网站][]。
 [1]:http://www.google.com &amp;ldquo;Google&amp;rdquo;
 [2]:http://www.leanote.com &amp;ldquo;Leanote&amp;rdquo;
 [3]:http://http://blog.leanote.com/freewalk &amp;ldquo;梵居闹市&amp;rdquo;
 [网站]:http://http://blog.leanote.com/freewalk&lt;/p&gt;
-&lt;h2 id=&#34;index&#34;&gt;自动链接&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-2&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;h3 id=&#34;index&#34;&gt;自动链接&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-2&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&amp;lt;&amp;gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -131,15 +147,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;address@example.com&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-3&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-3&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://example.com/&lt;/a&gt;
 &lt;a class=&#34;link&#34; href=&#34;mailto:address@example.com&#34; &gt;address@example.com&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;锚点&#34;&gt;锚点&lt;/h1&gt;
+&lt;p&gt;==&lt;em&gt;&lt;strong&gt;快捷键&lt;/strong&gt;&lt;/em&gt;==&lt;/p&gt;
+&lt;p&gt;command+k&lt;/p&gt;
+&lt;h2 id=&#34;锚点&#34;&gt;锚点&lt;/h2&gt;
 &lt;p&gt;网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。还有下一节的注脚。这些根本上都是用锚点来实现的。&lt;/p&gt;
-&lt;h3 id=&#34;语法描述&#34;&gt;语法描述&lt;/h3&gt;
+&lt;h4 id=&#34;语法描述&#34;&gt;语法描述&lt;/h4&gt;
 &lt;p&gt;在你准备跳转到的指定标题后插入锚点{#标记}，然后在文档的其它地方写上连接到锚点的链接。&lt;/p&gt;
-&lt;h3 id=&#34;代码-4&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-4&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -152,12 +170,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;跳转到[目录](#index){#index}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;跳转到&lt;a class=&#34;link&#34; href=&#34;#index&#34; &gt;自动链接&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;列表&#34;&gt;列表&lt;/h1&gt;
-&lt;h2 id=&#34;无序列表&#34;&gt;无序列表&lt;/h2&gt;
-&lt;h3 id=&#34;语法描述-1&#34;&gt;语法描述&lt;/h3&gt;
-&lt;p&gt;使用 *，+，- 表示无序列表。&lt;/p&gt;
-&lt;h3 id=&#34;代码-5&#34;&gt;代码&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;跳转到&lt;a class=&#34;link&#34; href=&#34;#%e5%8f%82%e8%80%83%e5%bc%8f&#34; &gt;参考式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;*** index与标题内容完全一致***&lt;/p&gt;
+&lt;p&gt;command+鼠标左键&lt;/p&gt;
+&lt;h2 id=&#34;列表&#34;&gt;列表&lt;/h2&gt;
+&lt;h3 id=&#34;无序列表&#34;&gt;无序列表&lt;/h3&gt;
+&lt;h4 id=&#34;语法描述-1&#34;&gt;语法描述&lt;/h4&gt;
+&lt;p&gt;使用 *，+，- 表示无序列表,降低基本级别tab，提升级别command+[&lt;/p&gt;
+&lt;h4 id=&#34;代码-5&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -165,21 +185,22 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 一
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 二
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 三
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 无序列表项 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-4&#34;&gt;样式&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;- 无序列表项 一&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;- 无序列表项 二&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;- 无序列表项 三&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;有序列表&#34;&gt;有序列表&lt;/h2&gt;
-&lt;h3 id=&#34;语法描述-2&#34;&gt;语法描述&lt;/h3&gt;
-&lt;p&gt;有序列表则使用数字接着一个英文句点。&lt;/p&gt;
-&lt;h3 id=&#34;代码-6&#34;&gt;代码&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-4&#34;&gt;样式&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表项&lt;/li&gt;
+&lt;li&gt;无序列表项&lt;/li&gt;
+&lt;li&gt;无序列表项&lt;/li&gt;
+&lt;li&gt;无序列表项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;有序列表&#34;&gt;有序列表&lt;/h3&gt;
+&lt;h4 id=&#34;语法描述-2&#34;&gt;语法描述&lt;/h4&gt;
+&lt;p&gt;有序列表则使用数字接着一个英文句点。(command+option+o), tab降低级别&lt;/p&gt;
+&lt;h4 id=&#34;代码-6&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -192,16 +213,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 有序列表项 三
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-5&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-5&#34;&gt;样式&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;1. 有序列表项 一&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;2. 有序列表项 二&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;3. 有序列表项 三&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表项&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表项&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有序列表项&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;定义型列表&#34;&gt;定义型列表？&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-3&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;待办事项——段落——任务列表&lt;/p&gt;
+&lt;h3 id=&#34;定义型列表&#34;&gt;定义型列表？&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-3&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;定义型列表由名词和解释组成。一行写上定义，紧跟一行写上解释。解释的写法:紧跟一个缩进(Tab)&lt;/p&gt;
-&lt;h3 id=&#34;代码-7&#34;&gt;代码：&lt;/h3&gt;
+&lt;h4 id=&#34;代码-7&#34;&gt;代码：&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -224,8 +257,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        代码块（左侧有八个不可见的空格）
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;列表缩进&#34;&gt;列表缩进&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-4&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;/div&gt;&lt;h3 id=&#34;列表缩进&#34;&gt;列表缩进&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-4&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;列表项目标记通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符。*+tab&lt;/p&gt;
 &lt;p&gt;要让列表看起来更漂亮，你可以把内容用固定的缩进整理好（显示效果与代码一致）：&lt;/p&gt;
 &lt;ul&gt;
@@ -241,10 +274,10 @@
 悄悄的我走了， 正如我悄悄的来； 我挥一挥衣袖， 不带走一片云彩。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;包含引用的列表&#34;&gt;包含引用的列表&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-5&#34;&gt;语法说明：&lt;/h3&gt;
+&lt;h3 id=&#34;包含引用的列表&#34;&gt;包含引用的列表&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-5&#34;&gt;语法说明：&lt;/h4&gt;
 &lt;p&gt;如果要在列表项目内放进引用，那 &amp;gt; 就需要缩进：&lt;/p&gt;
-&lt;h3 id=&#34;代码-8&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-8&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -257,7 +290,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;gt; 打开电灯。
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-6&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-6&#34;&gt;样式&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;阅读的方法&lt;/p&gt;
@@ -267,10 +300,10 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;包含代码区块的引用&#34;&gt;包含代码区块的引用？&lt;/h3&gt;
-&lt;h3 id=&#34;语法说明-6&#34;&gt;语法说明&lt;/h3&gt;
+&lt;h4 id=&#34;包含代码区块的引用&#34;&gt;包含代码区块的引用？&lt;/h4&gt;
+&lt;h4 id=&#34;语法说明-6&#34;&gt;语法说明&lt;/h4&gt;
 &lt;p&gt;如果要放代码区块的话，该区块就需要缩进两次，也就是 8 个空格或是 2 个制表符：&lt;/p&gt;
-&lt;h2 id=&#34;特殊情况&#34;&gt;特殊情况&lt;/h2&gt;
+&lt;h3 id=&#34;特殊情况&#34;&gt;特殊情况&lt;/h3&gt;
 &lt;p&gt;在特殊情况下，项目列表很可能会不小心产生，像是下面这样的写法：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -291,10 +324,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1986\. What a great season.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;引用&#34;&gt;引用&lt;/h1&gt;
-&lt;h2 id=&#34;语法说明-7&#34;&gt;语法说明：&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;h3 id=&#34;语法说明-7&#34;&gt;语法说明&lt;/h3&gt;
 &lt;p&gt;引用需要在被引用的文本前加上&amp;gt;符号。&lt;/p&gt;
-&lt;h2 id=&#34;代码-9&#34;&gt;代码：&lt;/h2&gt;
+&lt;h3 id=&#34;代码-9&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -313,7 +346,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; 无意义的占行文字4.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;样式-7&#34;&gt;样式&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;样式-7&#34;&gt;样式&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这是一个有两段文字的引用,
 无意义的占行文字 1.
@@ -322,9 +355,9 @@
 无意义的占行文字 4.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &amp;gt; ：&lt;/p&gt;
-&lt;h2 id=&#34;引用的多层嵌套&#34;&gt;引用的多层嵌套&lt;/h2&gt;
+&lt;h3 id=&#34;引用的多层嵌套&#34;&gt;引用的多层嵌套&lt;/h3&gt;
 &lt;p&gt;区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &amp;gt; ：&lt;/p&gt;
-&lt;h3 id=&#34;代码-10&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-10&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -352,9 +385,9 @@
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;引用其它要素&#34;&gt;引用其它要素&lt;/h2&gt;
+&lt;h3 id=&#34;引用其它要素&#34;&gt;引用其它要素&lt;/h3&gt;
 &lt;p&gt;引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：&lt;/p&gt;
-&lt;h3 id=&#34;代码-11&#34;&gt;代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-11&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -384,11 +417,27 @@
 &lt;pre&gt;&lt;code&gt;return shell_exec(&amp;quot;echo $input | $markdown_script&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&#34;插入图像&#34;&gt;插入图像&lt;/h1&gt;
+&lt;p&gt;==&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;==&lt;/p&gt;
+&lt;p&gt;快捷键：option+command+Q&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;空格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;插入图像&#34;&gt;插入图像&lt;/h2&gt;
 &lt;p&gt;图片的创建方式与超链接相似，而且和超链接一样也有两种写法，行内式和参考式写法。&lt;/p&gt;
 &lt;p&gt;语法中图片 Alt 的意思是如果图片因为某些原因不能显示，就用定义的图片 Alt 文字来代替图片。 图片 Title 则和链接中的 Title 一样，表示鼠标悬停与图片上时出现的文字。 Alt 和 Title 都不是必须的，可以省略，但建议写上。&lt;/p&gt;
-&lt;h2 id=&#34;行内式-1&#34;&gt;行内式&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-8&#34;&gt;语法说明&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;：图片地址通过ipac上传至图床（网络地址）或者&lt;a class=&#34;link&#34; href=&#34;https://sm.ms/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;点击&lt;/a&gt;，网页复制到typora中ctrl+v即可，也可以复制图片shift+command+u上传至图床&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bd66ri2sj213s0qi765.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;快捷键&lt;/strong&gt;&lt;/em&gt; cotrol+command+i&lt;/p&gt;
+&lt;h3 id=&#34;行内式-1&#34;&gt;行内式&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-8&#34;&gt;语法说明&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -397,10 +446,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![图片Alt](图片地址 “图片Title”)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-8&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-8&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;![图片Alt](图片地址 “图片 Title”)&lt;/p&gt;
-&lt;h2 id=&#34;参考式-1&#34;&gt;参考式&lt;/h2&gt;
-&lt;h3 id=&#34;语法说明-9&#34;&gt;语法说明&lt;/h3&gt;
+&lt;h3 id=&#34;参考式-1&#34;&gt;参考式&lt;/h3&gt;
+&lt;h4 id=&#34;语法说明-9&#34;&gt;语法说明&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -413,7 +462,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;在文档的最后写上[标记]:图片地址 “Title”
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;代码-12&#34;&gt;代码&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;代码-12&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -439,10 +488,10 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
+&lt;h2 id=&#34;目录&#34;&gt;目录&lt;/h2&gt;
 &lt;p&gt;在段落中填写 &lt;code&gt;[TOC]&lt;/code&gt; 以显示全文内容的目录结构。&lt;/p&gt;
-&lt;h1 id=&#34;注脚&#34;&gt;注脚&lt;/h1&gt;
-&lt;h2 id=&#34;语法说明-10&#34;&gt;语法说明：&lt;/h2&gt;
+&lt;h2 id=&#34;脚注&#34;&gt;脚注&lt;/h2&gt;
+&lt;h3 id=&#34;语法说明-10&#34;&gt;语法说明&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -459,7 +508,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;注意：经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经Markdown转换后，也会自动归类到文章的最后。
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;代码-13&#34;&gt;代码&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;代码-13&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -474,11 +523,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[^Le]:开源笔记平台，支持Markdown和笔记直接发为博文
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;样式-9&#34;&gt;样式&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;样式-9&#34;&gt;样式&lt;/h3&gt;
 &lt;p&gt;使用 Markdown&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;可以效率的书写文档, 直接转换成 HTML&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, 你可以使用 Leanote&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; 编辑器进行书写。&lt;/p&gt;
-&lt;h1 id=&#34;latex-公式&#34;&gt;LaTeX 公式?&lt;/h1&gt;
-&lt;h2 id=&#34;表示行内公式&#34;&gt;$表示行内公式&lt;/h2&gt;
-&lt;h3 id=&#34;代码-14&#34;&gt;代码&lt;/h3&gt;
+&lt;h2 id=&#34;latex-公式&#34;&gt;LaTeX 公式?&lt;/h2&gt;
+&lt;h3 id=&#34;表示行内公式&#34;&gt;$表示行内公式&lt;/h3&gt;
+&lt;h4 id=&#34;代码-14&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -487,10 +536,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-10&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-10&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。&lt;/p&gt;
-&lt;h2 id=&#34;-表示整行公式&#34;&gt;$$ 表示整行公式&lt;/h2&gt;
-&lt;h3 id=&#34;代码-15&#34;&gt;代码&lt;/h3&gt;
+&lt;h3 id=&#34;-表示整行公式&#34;&gt;$$ 表示整行公式&lt;/h3&gt;
+&lt;h4 id=&#34;代码-15&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -505,14 +554,17 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;样式-11&#34;&gt;样式&lt;/h3&gt;
+&lt;/div&gt;&lt;h4 id=&#34;样式-11&#34;&gt;样式&lt;/h4&gt;
 &lt;p&gt;$$\sum_{i=1}^n a_i=0$$
 $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
 $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;详情&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;流程图&#34;&gt;流程图&lt;/h1&gt;
-&lt;h2 id=&#34;代码-16&#34;&gt;代码&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;行内公式快捷键cotrol+m&lt;/p&gt;
+&lt;p&gt;公式块快捷键option+command+B&lt;/p&gt;
+&lt;h2 id=&#34;流程图&#34;&gt;流程图&lt;/h2&gt;
+&lt;h3 id=&#34;代码-16&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -541,14 +593,14 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://flowchart.js.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;详情&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;表格&#34;&gt;表格&lt;/h1&gt;
-&lt;h2 id=&#34;语法说明-11&#34;&gt;语法说明：&lt;/h2&gt;
+&lt;h2 id=&#34;表格&#34;&gt;表格&lt;/h2&gt;
+&lt;h3 id=&#34;语法说明-11&#34;&gt;语法说明&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。&lt;/li&gt;
 &lt;li&gt;列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。&lt;/li&gt;
 &lt;li&gt;第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;代码-17&#34;&gt;代码：&lt;/h2&gt;
+&lt;h3 id=&#34;代码-17&#34;&gt;代码&lt;/h3&gt;
 &lt;p&gt;简单方式写表格：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -668,9 +720,11 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h1 id=&#34;分割线&#34;&gt;分割线&lt;/h1&gt;
+&lt;p&gt;==&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;==&lt;/p&gt;
+&lt;p&gt;快捷键option+command+t&lt;/p&gt;
+&lt;h2 id=&#34;分割线&#34;&gt;分割线&lt;/h2&gt;
 &lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线&lt;/p&gt;
-&lt;h2 id=&#34;代码-18&#34;&gt;代码：&lt;/h2&gt;
+&lt;h3 id=&#34;代码-18&#34;&gt;代码&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -687,20 +741,20 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;样式-12&#34;&gt;样式&lt;/h2&gt;
+&lt;/div&gt;&lt;h3 id=&#34;样式-12&#34;&gt;样式&lt;/h3&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;代码-19&#34;&gt;代码&lt;/h1&gt;
+&lt;h2 id=&#34;插入代码&#34;&gt;插入代码&lt;/h2&gt;
 &lt;p&gt;对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(Tab), 另一种是利用”`”符号（一般在 ESC 键下方）包裹代码。&lt;/p&gt;
 &lt;p&gt;语法说明：&lt;/p&gt;
 &lt;p&gt;插入行内代码，即插入一个单词或者一句代码的情况，使用&lt;code&gt;code&lt;/code&gt;这样的形式插入。
 插入多行代码，可以使用缩进或者“&lt;code&gt; code “&lt;/code&gt;,具体看示例。
 注意： 缩进式插入前方必须有空行&lt;/p&gt;
-&lt;h2 id=&#34;行内式-2&#34;&gt;行内式&lt;/h2&gt;
-&lt;h3 id=&#34;代码-20&#34;&gt;代码&lt;/h3&gt;
+&lt;h3 id=&#34;行内式-2&#34;&gt;行内式&lt;/h3&gt;
+&lt;h4 id=&#34;代码-19&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -709,11 +763,11 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C语言里的函数 `scanf()` 怎么使用？
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;C 语言里的函数 &lt;code&gt;scanf()&lt;/code&gt; 怎么使用？&lt;/p&gt;
-&lt;h2 id=&#34;缩进式多行代码&#34;&gt;缩进式多行代码&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;C 语言里的函数 &lt;code&gt;int&lt;/code&gt; 怎么使用？&lt;/p&gt;
+&lt;h3 id=&#34;缩进式多行代码&#34;&gt;缩进式多行代码&lt;/h3&gt;
 &lt;p&gt;缩进 4 个空格或是 1 个制表符&lt;/p&gt;
 &lt;p&gt;一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。&lt;/p&gt;
-&lt;h3 id=&#34;代码-21&#34;&gt;代码：&lt;/h3&gt;
+&lt;h4 id=&#34;代码-20&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -730,8 +784,8 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;用六个包裹多行代码&#34;&gt;用六个`包裹多行代码&lt;/h2&gt;
-&lt;h3 id=&#34;代码-22&#34;&gt;代码：&lt;/h3&gt;
+&lt;/div&gt;&lt;h3 id=&#34;用六个包裹多行代码&#34;&gt;用六个`包裹多行代码&lt;/h3&gt;
+&lt;h4 id=&#34;代码-21&#34;&gt;代码&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -743,18 +797,20 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;```
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;int main(void)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    printf(&amp;#34;Hello world\n&amp;#34;);
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;、、、
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;```&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello world&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;、、、&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;html-原始码&#34;&gt;HTML 原始码&lt;/h2&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;快捷键option+command+c&lt;/p&gt;
+&lt;h3 id=&#34;html-原始码&#34;&gt;HTML 原始码&lt;/h3&gt;
 &lt;p&gt;在代码区块里面， &amp;amp; 、 &amp;lt; 和 &amp;gt; 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，剩下的 Markdown 都会帮你处理，例如：&lt;/p&gt;
-&lt;h3 id=&#34;代码-23&#34;&gt;代码：&lt;/h3&gt;
+&lt;h4 id=&#34;代码-22&#34;&gt;代码&lt;/h4&gt;
 &lt;p&gt;第一个例子：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -817,6 +873,241 @@ $$\sum^{j-1}&lt;em&gt;{k=0}{\widehat{\gamma}&lt;/em&gt;{kj} z_k}$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
+</description>
+        </item>
+        <item>
+        <title>LaTeX 公式</title>
+        <link>https://example.com/2022/latex-%E5%85%AC%E5%BC%8F/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/2022/latex-%E5%85%AC%E5%BC%8F/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;文字排版+数学公式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;希腊字母&#34;&gt;希腊字母&lt;/h2&gt;
+&lt;p&gt;$$
+\delta,\lambda\
+\Delta,\Lambda\
+\Alpha\Beta\
+\phi,\varphi\
+\epsilon,\varepsilon\
+π
+$$&lt;/p&gt;
+&lt;h2 id=&#34;上下标&#34;&gt;上下标&lt;/h2&gt;
+&lt;p&gt;$$
+a^2,a_1\
+x^{y+z},p_{ij},p_ij\
+x_i,x_{\text i}\
+\text{A B},\rm{A B}\
+\text A B,\rm A B\
+{\rm A} B\
+\text{e},\text{i}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;分式与根式&#34;&gt;分式与根式&lt;/h2&gt;
+&lt;p&gt;$$
+\frac{1}{2},\frac 1 2,\
+\frac 1 {x+y}\
+\frac {\dfrac 1 x + 1}{y + 1}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\sqrt 2,\sqrt{x+y},\sqrt[3]x
+$$&lt;/p&gt;
+&lt;h2 id=&#34;普通运算符&#34;&gt;普通运算符&lt;/h2&gt;
+&lt;p&gt;$$
++-\
+\times,\cdot,\div\
+\pm,\mp\&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;,\ge,\le,\gg,\ll,\ne,\approx,\equiv\
+\cap,\cup,\in,\notin,\subseteq,\subsetneqq,\varnothing\
+\forall,\exists,\nexists\
+\because,\therefore\
+\mathbb R,\R,\Q,\N,\Z_+\
+\mathcal F,\mathscr F
+$$&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;$$
+\cdots,\vdots,\ddots
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\infty,\partial,∂,\nabla,\propto,\degree
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\sin x,\sec x,\cosh x\
+\log_2 x, \ln x,\lg x\
+\lim\limits_{x \to 0} \frac { x}{\sin x}\
+\max x
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\text{MSE}(x)
+$$&lt;/p&gt;
+&lt;h2 id=&#34;大型运算符&#34;&gt;大型运算符&lt;/h2&gt;
+&lt;p&gt;$$
+\sum,\prod\
+\sum_i,\sum_{i=0}^N\
+\frac{\sum\limits_{i=1}^n x_i}{\prod\limits_{i=1}^n x_i}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\int,\iint,\iiint,\oint,\oiint\
+\int_{-\infty}^0 f(x),\text d x
+$$&lt;/p&gt;
+&lt;p&gt;$$
+a, a\
+a\ a\
+a\quad a\
+a\qquad a
+$$&lt;/p&gt;
+&lt;h2 id=&#34;标注符号&#34;&gt;标注符号&lt;/h2&gt;
+&lt;p&gt;$$
+\vec x,\overrightarrow {AB}\
+\bar x,\overline{AB}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;箭头&#34;&gt;箭头&lt;/h2&gt;
+&lt;p&gt;$$
+\leftarrow,\Rightarrow,\Leftrightarrow,\longleftarrow
+$$&lt;/p&gt;
+&lt;h2 id=&#34;括号与定界符&#34;&gt;括号与定界符&lt;/h2&gt;
+&lt;p&gt;$$
+([]){ }\
+\lceil,\rceil,\lfloor,\rfloor,||\
+\left(0,\frac 1 a\right]\
+\left.\frac {∂f}{∂x}\right|_{x=0}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;多行公式&#34;&gt;多行公式&lt;/h2&gt;
+&lt;p&gt;$$
+\begin{align}&lt;/p&gt;
+&lt;p&gt;a&amp;amp;=b+c+d\
+&amp;amp;=e+f&lt;/p&gt;
+&lt;p&gt;\end{align}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;大括号&#34;&gt;大括号&lt;/h2&gt;
+&lt;p&gt;$$
+f(x)=&lt;/p&gt;
+&lt;p&gt;\begin{cases}&lt;/p&gt;
+&lt;p&gt;\sin x, &amp;amp; -π\le x \le π\
+0,&amp;amp; \text{其他}&lt;/p&gt;
+&lt;p&gt;\end{cases}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;矩阵&#34;&gt;矩阵&lt;/h2&gt;
+&lt;p&gt;$$
+\begin{matrix}&lt;/p&gt;
+&lt;p&gt;a &amp;amp; b &amp;amp; \cdots &amp;amp; c \
+\vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
+e &amp;amp; f&amp;amp; \cdots &amp;amp; g&lt;/p&gt;
+&lt;p&gt;\end{matrix}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{bmatrix}&lt;/p&gt;
+&lt;p&gt;a &amp;amp; b &amp;amp; \cdots &amp;amp; c \
+\vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
+e &amp;amp; f&amp;amp; \cdots &amp;amp; g&lt;/p&gt;
+&lt;p&gt;\end{bmatrix}&lt;/p&gt;
+&lt;p&gt;\begin{pmatrix}&lt;/p&gt;
+&lt;p&gt;a &amp;amp; b &amp;amp; \cdots &amp;amp; c \
+\vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
+e &amp;amp; f&amp;amp; \cdots &amp;amp; g&lt;/p&gt;
+&lt;p&gt;\end{pmatrix}&lt;/p&gt;
+&lt;p&gt;\begin{vmatrix}&lt;/p&gt;
+&lt;p&gt;a &amp;amp; b &amp;amp; \cdots &amp;amp; c \
+\vdots&amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
+e &amp;amp; f&amp;amp; \cdots &amp;amp; g&lt;/p&gt;
+&lt;p&gt;\end{vmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\bf A,\bf B^{\rm T}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;实战演练&#34;&gt;实战演练&lt;/h2&gt;
+&lt;p&gt;$$
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} \exp \left[ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\right]
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\lim\limits_{N\to \infty} P \left{ \left| \frac {I\left( \alpha_i \right)}{N} - H(s) \right| &amp;lt; \varepsilon  \right} = 1
+$$&lt;/p&gt;
+&lt;p&gt;$$
+x(n) = \frac 1 {2\pi} \int _{-π} ^ π X\left( {\rm e} ^ {{\rm j} \omega } \right) {\rm e} ^ {{\rm j} \omega n} , {\rm d}\omega\
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}&lt;/p&gt;
+&lt;p&gt;\vec B \left( \vec r \right) &amp;amp;= \frac {\mu_0}{4\pi}\oint_C \frac {I , {\rm d} \vec l \times \vec R}{R^3}\&lt;/p&gt;
+&lt;p&gt;&amp;amp;= \frac {\mu_0}{4\pi} \int_V \frac{\vec J_V \times \vec R}{R^3}, {\rm d} V&#39;&lt;/p&gt;
+&lt;p&gt;\end{align}
+$$&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Picture 排版</title>
+        <link>https://example.com/2022/picture-%E6%8E%92%E7%89%88/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/2022/picture-%E6%8E%92%E7%89%88/</guid>
+        <description>&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bcvf3y8tj20u00u076i.jpg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zoom:25%;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;图注 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;50%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  头像👤
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;center&amp;gt;表示居中
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;表示左对齐&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;left&amp;gt;表示左对齐
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;图片并排&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;25%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;25%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  头像👤
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;*&lt;strong&gt;提示&lt;/strong&gt;：比例过大会撑开换行&lt;/p&gt;
 </description>
         </item>
         

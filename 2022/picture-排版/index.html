@@ -1,44 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   '><title>3.配置环境变量</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1  &amp;lt;img src=&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bcvf3y8tj20u00u076i.jpg&amp;#34; style=&amp;#34;zoom:25%;&amp;#34; /&amp;gt;   图注 1 2 3 4 5  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 50% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   提示
+1  &amp;lt;center&amp;gt;表示居中   表示左对齐
+1  &amp;lt;left&amp;gt;表示左对齐   图片并排
+1 2 3 4 5 6  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   *提示：比例过大会撑开换行'><title>Picture 排版</title>
 
-<link rel='canonical' href='https://example.com/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/'>
+<link rel='canonical' href='https://example.com/2022/picture-%E6%8E%92%E7%89%88/'>
 
-<link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='3.配置环境变量'>
-<meta property='og:description' content='命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   '>
-<meta property='og:url' content='https://example.com/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/'>
+<link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='Picture 排版'>
+<meta property='og:description' content='1  &amp;lt;img src=&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bcvf3y8tj20u00u076i.jpg&amp;#34; style=&amp;#34;zoom:25%;&amp;#34; /&amp;gt;   图注 1 2 3 4 5  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 50% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   提示
+1  &amp;lt;center&amp;gt;表示居中   表示左对齐
+1  &amp;lt;left&amp;gt;表示左对齐   图片并排
+1 2 3 4 5 6  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   *提示：比例过大会撑开换行'>
+<meta property='og:url' content='https://example.com/2022/picture-%E6%8E%92%E7%89%88/'>
 <meta property='og:site_name' content='玮'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-16T13:00:12&#43;08:00'/>
-<meta name="twitter:title" content="3.配置环境变量">
-<meta name="twitter:description" content="命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-17T14:25:06&#43;08:00'/>
+<meta name="twitter:title" content="Picture 排版">
+<meta name="twitter:description" content="1  &amp;lt;img src=&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bcvf3y8tj20u00u076i.jpg&amp;#34; style=&amp;#34;zoom:25%;&amp;#34; /&amp;gt;   图注 1 2 3 4 5  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 50% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   提示
+1  &amp;lt;center&amp;gt;表示居中   表示左对齐
+1  &amp;lt;left&amp;gt;表示左对齐   图片并排
+1 2 3 4 5 6  &amp;lt;center&amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;img src =&amp;#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&amp;#34; width = 25% &amp;gt; &amp;lt;br&amp;gt; 头像👤 &amp;lt;/center&amp;gt;   *提示：比例过大会撑开换行">
     <link rel="shortcut icon" href="/img/favicon.png" />
 
     </head>
@@ -280,8 +262,8 @@ java 命令用法 1  java 类名   ">
     
     <header class="article-category">
         
-            <a href="/categories/java/" >
-                Java
+            <a href="/categories/mark/" >
+                Markdown
             </a>
         
     </header>
@@ -289,7 +271,7 @@ java 命令用法 1  java 类名   ">
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">3.配置环境变量</a>
+            <a href="/2022/picture-%E6%8E%92%E7%89%88/">Picture 排版</a>
         </h2>
     
         
@@ -337,45 +319,74 @@ java 命令用法 1  java 类名   ">
     <section class="article-content">
     
     
-    <h2 id="命令">命令</h2>
-<p>编译命令：java</p>
-<p>运行命令：javac</p>
-<p>在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行</p>
-<p><a class="link" href="https://codeantenna.com/a/c4AqEk1JrB"  target="_blank" rel="noopener"
-    >Mac 配置环境变量</a></p>
-<h2 id="用法">用法</h2>
-<h3 id="javac-命令用法">Javac 命令用法：</h3>
+    <!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">javac -d destdir srcFile
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bcvf3y8tj20u00u076i.jpg&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;zoom:25%;&#34;</span> <span class="p">/&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>-d destdir:字节码存放路径(可省)</p>
-<p>srcFile：源文件所在位置</p>
+</div><p>图注 <!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src </span><span class="o">=</span><span class="s">&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&#34;</span> <span class="na">width </span><span class="o">=</span> <span class="s">50%</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  头像👤
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><em><strong>提示</strong></em></p>
+<!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">javac -d . Hello.java
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;center&gt;表示居中
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>.表示当前路径</p>
-<p><strong><em>注意</em></strong></p>
-<p>编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件</p>
-<h3 id="java-命令用法">java 命令用法</h3>
+</div><p><!-- raw HTML omitted -->表示左对齐</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java 类名
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;left&gt;表示左对齐
 </span></span></code></pre></td></tr></table>
 </div>
+</div><p>图片并排</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src </span><span class="o">=</span><span class="s">&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&#34;</span> <span class="na">width </span><span class="o">=</span> <span class="s">25%</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src </span><span class="o">=</span><span class="s">&#34;https://tva1.sinaimg.cn/large/e6c9d24egy1h2bdeapjzbj20u00u0wgb.jpg&#34;</span> <span class="na">width </span><span class="o">=</span> <span class="s">25%</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  头像👤
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>*<strong>提示</strong>：比例过大会撑开换行</p>
+
 </section>
 
 
@@ -394,7 +405,7 @@ java 命令用法 1  java 类名   ">
 
 
         <span>
-            最后更新于 May 16, 2022 13:00 CST
+            最后更新于 May 17, 2022 14:25 CST
         </span>
     </section></footer>
 
@@ -414,60 +425,24 @@ java 命令用法 1  java 类名   ">
             
                 
 <article class="">
-    <a href="/2022/1.%E8%B5%B7%E6%BA%90/">
+    <a href="/2022/basic-%E8%AF%AD%E6%B3%95/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">1.起源</h2>
+            <h2 class="article-title">Basic 语法</h2>
         </div>
     </a>
 </article>
             
                 
 <article class="">
-    <a href="/2022/2.%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">
+    <a href="/2022/latex-%E5%85%AC%E5%BC%8F/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">2.运行机制</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/4.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">4.面向对象程序设计</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/5.%E6%B3%A8%E9%87%8A/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">5.注释</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/6.%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">6.变量与数据类型</h2>
+            <h2 class="article-title">LaTeX 公式</h2>
         </div>
     </a>
 </article>
@@ -602,44 +577,7 @@ java 命令用法 1  java 类名   ">
             >
 
             </main>
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#命令">命令</a></li>
-    <li><a href="#用法">用法</a>
-      <ol>
-        <li><a href="#javac-命令用法">Javac 命令用法：</a></li>
-        <li><a href="#java-命令用法">java 命令用法</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
         </div>
         <script 

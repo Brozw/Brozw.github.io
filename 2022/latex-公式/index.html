@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   '><title>3.配置环境变量</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='文字排版&#43;数学公式
+ 希腊字母 $$ \delta,\lambda\ \Delta,\Lambda\ \Alpha\Beta\ \phi,\varphi\ \epsilon,\varepsilon\ π $$
+上下标 $$ a^2,a_1\ x^{y&#43;z},p_{ij},p_ij\ x_i,x_{\text i}\ \text{A B},\rm{A B}\ \text A B,\rm A B\ {\rm A} B\ \text{e},\text{i} $$
+分式与根式 $$ \frac{1}{2},\frac 1 2,\ \frac 1 {x&#43;y}\ \frac {\dfrac 1 x &#43; 1}{y &#43; 1} $$
+$$ \sqrt 2,\sqrt{x&#43;y},\sqrt[3]x $$
+普通运算符 $$ &#43;-\ \times,\cdot,\div\ \pm,\mp\
+ &amp;lt;,\ge,\le,\gg,\ll,\ne,\approx,\equiv\ \cap,\cup,\in,\notin,\subseteq,\subsetneqq,\varnothing\ \forall,\exists,\nexists\ \because,\therefore\ \mathbb R,\R,\Q,\N,\Z_&#43;\ \mathcal F,\mathscr F $$
+ $$ \cdots,\vdots,\ddots $$'><title>LaTeX 公式</title>
 
-<link rel='canonical' href='https://example.com/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/'>
+<link rel='canonical' href='https://example.com/2022/latex-%E5%85%AC%E5%BC%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='3.配置环境变量'>
-<meta property='og:description' content='命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   '>
-<meta property='og:url' content='https://example.com/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/'>
+<link rel="stylesheet" href="/scss/style.min.9e1a9783a1805fb5e2365d03cb7b6efb30f210a65acf771f17092bc9a5bc7a45.css"><meta property='og:title' content='LaTeX 公式'>
+<meta property='og:description' content='文字排版&#43;数学公式
+ 希腊字母 $$ \delta,\lambda\ \Delta,\Lambda\ \Alpha\Beta\ \phi,\varphi\ \epsilon,\varepsilon\ π $$
+上下标 $$ a^2,a_1\ x^{y&#43;z},p_{ij},p_ij\ x_i,x_{\text i}\ \text{A B},\rm{A B}\ \text A B,\rm A B\ {\rm A} B\ \text{e},\text{i} $$
+分式与根式 $$ \frac{1}{2},\frac 1 2,\ \frac 1 {x&#43;y}\ \frac {\dfrac 1 x &#43; 1}{y &#43; 1} $$
+$$ \sqrt 2,\sqrt{x&#43;y},\sqrt[3]x $$
+普通运算符 $$ &#43;-\ \times,\cdot,\div\ \pm,\mp\
+ &amp;lt;,\ge,\le,\gg,\ll,\ne,\approx,\equiv\ \cap,\cup,\in,\notin,\subseteq,\subsetneqq,\varnothing\ \forall,\exists,\nexists\ \because,\therefore\ \mathbb R,\R,\Q,\N,\Z_&#43;\ \mathcal F,\mathscr F $$
+ $$ \cdots,\vdots,\ddots $$'>
+<meta property='og:url' content='https://example.com/2022/latex-%E5%85%AC%E5%BC%8F/'>
 <meta property='og:site_name' content='玮'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-16T13:00:12&#43;08:00'/>
-<meta name="twitter:title" content="3.配置环境变量">
-<meta name="twitter:description" content="命令 编译命令：java
-运行命令：javac
-在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行
-Mac 配置环境变量
-用法 Javac 命令用法： 1  javac -d destdir srcFile   -d destdir:字节码存放路径(可省)
-srcFile：源文件所在位置
-1  javac -d . Hello.java   .表示当前路径
-注意
-编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件
-java 命令用法 1  java 类名   ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-17T14:27:36&#43;08:00'/>
+<meta name="twitter:title" content="LaTeX 公式">
+<meta name="twitter:description" content="文字排版&#43;数学公式
+ 希腊字母 $$ \delta,\lambda\ \Delta,\Lambda\ \Alpha\Beta\ \phi,\varphi\ \epsilon,\varepsilon\ π $$
+上下标 $$ a^2,a_1\ x^{y&#43;z},p_{ij},p_ij\ x_i,x_{\text i}\ \text{A B},\rm{A B}\ \text A B,\rm A B\ {\rm A} B\ \text{e},\text{i} $$
+分式与根式 $$ \frac{1}{2},\frac 1 2,\ \frac 1 {x&#43;y}\ \frac {\dfrac 1 x &#43; 1}{y &#43; 1} $$
+$$ \sqrt 2,\sqrt{x&#43;y},\sqrt[3]x $$
+普通运算符 $$ &#43;-\ \times,\cdot,\div\ \pm,\mp\
+ &amp;lt;,\ge,\le,\gg,\ll,\ne,\approx,\equiv\ \cap,\cup,\in,\notin,\subseteq,\subsetneqq,\varnothing\ \forall,\exists,\nexists\ \because,\therefore\ \mathbb R,\R,\Q,\N,\Z_&#43;\ \mathcal F,\mathscr F $$
+ $$ \cdots,\vdots,\ddots $$">
     <link rel="shortcut icon" href="/img/favicon.png" />
 
     </head>
@@ -280,8 +274,8 @@ java 命令用法 1  java 类名   ">
     
     <header class="article-category">
         
-            <a href="/categories/java/" >
-                Java
+            <a href="/categories/mark/" >
+                Markdown
             </a>
         
     </header>
@@ -289,7 +283,7 @@ java 命令用法 1  java 类名   ">
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/2022/3.%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">3.配置环境变量</a>
+            <a href="/2022/latex-%E5%85%AC%E5%BC%8F/">LaTeX 公式</a>
         </h2>
     
         
@@ -323,7 +317,7 @@ java 命令用法 1  java 类名   ">
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -337,45 +331,159 @@ java 命令用法 1  java 类名   ">
     <section class="article-content">
     
     
-    <h2 id="命令">命令</h2>
-<p>编译命令：java</p>
-<p>运行命令：javac</p>
-<p>在使用这两个命令之前，需要配置环境变量（一系列路径），使得操作系统通过环境变量查找到命令从而执行</p>
-<p><a class="link" href="https://codeantenna.com/a/c4AqEk1JrB"  target="_blank" rel="noopener"
-    >Mac 配置环境变量</a></p>
-<h2 id="用法">用法</h2>
-<h3 id="javac-命令用法">Javac 命令用法：</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">javac -d destdir srcFile
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>-d destdir:字节码存放路径(可省)</p>
-<p>srcFile：源文件所在位置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">javac -d . Hello.java
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>.表示当前路径</p>
-<p><strong><em>注意</em></strong></p>
-<p>编译后每个类都会生成对应的 class 文件，因为编译生成字节码文件默认以类名为文件名，一个源文件有多个类，则会产生多个字节码文件</p>
-<h3 id="java-命令用法">java 命令用法</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">java 类名
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <blockquote>
+<p>文字排版+数学公式</p>
+</blockquote>
+<h2 id="希腊字母">希腊字母</h2>
+<p>$$
+\delta,\lambda\
+\Delta,\Lambda\
+\Alpha\Beta\
+\phi,\varphi\
+\epsilon,\varepsilon\
+π
+$$</p>
+<h2 id="上下标">上下标</h2>
+<p>$$
+a^2,a_1\
+x^{y+z},p_{ij},p_ij\
+x_i,x_{\text i}\
+\text{A B},\rm{A B}\
+\text A B,\rm A B\
+{\rm A} B\
+\text{e},\text{i}
+$$</p>
+<h2 id="分式与根式">分式与根式</h2>
+<p>$$
+\frac{1}{2},\frac 1 2,\
+\frac 1 {x+y}\
+\frac {\dfrac 1 x + 1}{y + 1}
+$$</p>
+<p>$$
+\sqrt 2,\sqrt{x+y},\sqrt[3]x
+$$</p>
+<h2 id="普通运算符">普通运算符</h2>
+<p>$$
++-\
+\times,\cdot,\div\
+\pm,\mp\</p>
+<blockquote>
+<p>&lt;,\ge,\le,\gg,\ll,\ne,\approx,\equiv\
+\cap,\cup,\in,\notin,\subseteq,\subsetneqq,\varnothing\
+\forall,\exists,\nexists\
+\because,\therefore\
+\mathbb R,\R,\Q,\N,\Z_+\
+\mathcal F,\mathscr F
+$$</p>
+</blockquote>
+<p>$$
+\cdots,\vdots,\ddots
+$$</p>
+<p>$$
+\infty,\partial,∂,\nabla,\propto,\degree
+$$</p>
+<p>$$
+\sin x,\sec x,\cosh x\
+\log_2 x, \ln x,\lg x\
+\lim\limits_{x \to 0} \frac { x}{\sin x}\
+\max x
+$$</p>
+<p>$$
+\text{MSE}(x)
+$$</p>
+<h2 id="大型运算符">大型运算符</h2>
+<p>$$
+\sum,\prod\
+\sum_i,\sum_{i=0}^N\
+\frac{\sum\limits_{i=1}^n x_i}{\prod\limits_{i=1}^n x_i}
+$$</p>
+<p>$$
+\int,\iint,\iiint,\oint,\oiint\
+\int_{-\infty}^0 f(x),\text d x
+$$</p>
+<p>$$
+a, a\
+a\ a\
+a\quad a\
+a\qquad a
+$$</p>
+<h2 id="标注符号">标注符号</h2>
+<p>$$
+\vec x,\overrightarrow {AB}\
+\bar x,\overline{AB}
+$$</p>
+<h2 id="箭头">箭头</h2>
+<p>$$
+\leftarrow,\Rightarrow,\Leftrightarrow,\longleftarrow
+$$</p>
+<h2 id="括号与定界符">括号与定界符</h2>
+<p>$$
+([]){ }\
+\lceil,\rceil,\lfloor,\rfloor,||\
+\left(0,\frac 1 a\right]\
+\left.\frac {∂f}{∂x}\right|_{x=0}
+$$</p>
+<h2 id="多行公式">多行公式</h2>
+<p>$$
+\begin{align}</p>
+<p>a&amp;=b+c+d\
+&amp;=e+f</p>
+<p>\end{align}
+$$</p>
+<h2 id="大括号">大括号</h2>
+<p>$$
+f(x)=</p>
+<p>\begin{cases}</p>
+<p>\sin x, &amp; -π\le x \le π\
+0,&amp; \text{其他}</p>
+<p>\end{cases}
+$$</p>
+<h2 id="矩阵">矩阵</h2>
+<p>$$
+\begin{matrix}</p>
+<p>a &amp; b &amp; \cdots &amp; c \
+\vdots&amp; \vdots &amp; \ddots &amp; \vdots \
+e &amp; f&amp; \cdots &amp; g</p>
+<p>\end{matrix}
+$$</p>
+<p>$$
+\begin{bmatrix}</p>
+<p>a &amp; b &amp; \cdots &amp; c \
+\vdots&amp; \vdots &amp; \ddots &amp; \vdots \
+e &amp; f&amp; \cdots &amp; g</p>
+<p>\end{bmatrix}</p>
+<p>\begin{pmatrix}</p>
+<p>a &amp; b &amp; \cdots &amp; c \
+\vdots&amp; \vdots &amp; \ddots &amp; \vdots \
+e &amp; f&amp; \cdots &amp; g</p>
+<p>\end{pmatrix}</p>
+<p>\begin{vmatrix}</p>
+<p>a &amp; b &amp; \cdots &amp; c \
+\vdots&amp; \vdots &amp; \ddots &amp; \vdots \
+e &amp; f&amp; \cdots &amp; g</p>
+<p>\end{vmatrix}
+$$</p>
+<p>$$
+\bf A,\bf B^{\rm T}
+$$</p>
+<h2 id="实战演练">实战演练</h2>
+<p>$$
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} \exp \left[ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\right]
+$$</p>
+<p>$$
+\lim\limits_{N\to \infty} P \left{ \left| \frac {I\left( \alpha_i \right)}{N} - H(s) \right| &lt; \varepsilon  \right} = 1
+$$</p>
+<p>$$
+x(n) = \frac 1 {2\pi} \int _{-π} ^ π X\left( {\rm e} ^ {{\rm j} \omega } \right) {\rm e} ^ {{\rm j} \omega n} , {\rm d}\omega\
+$$</p>
+<p>$$
+\begin{align}</p>
+<p>\vec B \left( \vec r \right) &amp;= \frac {\mu_0}{4\pi}\oint_C \frac {I , {\rm d} \vec l \times \vec R}{R^3}\</p>
+<p>&amp;= \frac {\mu_0}{4\pi} \int_V \frac{\vec J_V \times \vec R}{R^3}, {\rm d} V'</p>
+<p>\end{align}
+$$</p>
+
 </section>
 
 
@@ -394,7 +502,7 @@ java 命令用法 1  java 类名   ">
 
 
         <span>
-            最后更新于 May 16, 2022 13:00 CST
+            最后更新于 May 17, 2022 14:27 CST
         </span>
     </section></footer>
 
@@ -414,60 +522,24 @@ java 命令用法 1  java 类名   ">
             
                 
 <article class="">
-    <a href="/2022/1.%E8%B5%B7%E6%BA%90/">
+    <a href="/2022/basic-%E8%AF%AD%E6%B3%95/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">1.起源</h2>
+            <h2 class="article-title">Basic 语法</h2>
         </div>
     </a>
 </article>
             
                 
 <article class="">
-    <a href="/2022/2.%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">
+    <a href="/2022/picture-%E6%8E%92%E7%89%88/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">2.运行机制</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/4.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">4.面向对象程序设计</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/5.%E6%B3%A8%E9%87%8A/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">5.注释</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/2022/6.%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">6.变量与数据类型</h2>
+            <h2 class="article-title">Picture 排版</h2>
         </div>
     </a>
 </article>
@@ -624,13 +696,18 @@ java 命令用法 1  java 类名   ">
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#命令">命令</a></li>
-    <li><a href="#用法">用法</a>
-      <ol>
-        <li><a href="#javac-命令用法">Javac 命令用法：</a></li>
-        <li><a href="#java-命令用法">java 命令用法</a></li>
-      </ol>
-    </li>
+    <li><a href="#希腊字母">希腊字母</a></li>
+    <li><a href="#上下标">上下标</a></li>
+    <li><a href="#分式与根式">分式与根式</a></li>
+    <li><a href="#普通运算符">普通运算符</a></li>
+    <li><a href="#大型运算符">大型运算符</a></li>
+    <li><a href="#标注符号">标注符号</a></li>
+    <li><a href="#箭头">箭头</a></li>
+    <li><a href="#括号与定界符">括号与定界符</a></li>
+    <li><a href="#多行公式">多行公式</a></li>
+    <li><a href="#大括号">大括号</a></li>
+    <li><a href="#矩阵">矩阵</a></li>
+    <li><a href="#实战演练">实战演练</a></li>
   </ol>
 </nav>
         </div>
